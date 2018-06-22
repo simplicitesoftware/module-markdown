@@ -9,7 +9,7 @@ MDDocumentHistoric.diff = function() {
 	var dh = this.getField("mdDocFile").getDocument(g);
 
 	var url = HTMLTool.getExternalObjectURL("MDDiff", "name1=" + HTTPTool.encode(dh.getName()) + "&doc1=" + dh.getId() + "&name2=" + HTTPTool.encode(d.getName()) + "&doc2=" + d.getId() + "&lines=3");
-	return this.javascript("Simplicite.UI.popup({ margin: 50, url: '" + url + "' })");
+	return g.isResponsive() ? this.redirect(url) : this.javascript("Simplicite.UI.popup({ margin: 50, url: '" + url + "&nav=" + Navigator.NONE + "' })");
 };
 
 MDDocumentHistoric.isActionEnable = function(row, action) {
