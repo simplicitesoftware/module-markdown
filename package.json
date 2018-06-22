@@ -1,0 +1,12 @@
+{
+    "date": "Fri Jun 22 10:57:09 CEST 2018",
+    "name": "Markdown",
+    "format": "xml",
+    "description": "Markdown documentation module",
+    "repository": {
+        "type": "url",
+        "url": "https://www.simplicite.io/resources/modules/markdown-app-4.0.xml"
+    },
+    "version": "4.0",
+    "dependencies": [{"Simplicite": "4.0"}]
+}

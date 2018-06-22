@@ -1,0 +1,823 @@
+components:
+  securitySchemes:
+    basicAuth:
+      scheme: basic
+      type: http
+    bearerAuth:
+      bearerFormat: Simplicite token
+      scheme: bearer
+      type: http
+servers:
+- url: https://dev40.dev.simplicite.io/api
+openapi: 3.0.0
+paths:
+  /login:
+    get:
+      security:
+      - basicAuth: []
+      description: Login
+      operationId: login
+      responses:
+        '200':
+          description: User token
+          content:
+            application/json: {}
+            text/plain: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+          enum:
+          - json
+          - oauth2
+        in: query
+        name: _output
+        description: Optional output format
+        required: false
+      tags:
+      - Application
+  /rest/MDImage:
+    get:
+      security:
+      - bearerAuth: []
+      description: Get business object metadata or search records
+      operationId: obj-mdimage-search
+      responses:
+        '200':
+          description: Business object metadata or records of search result
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: _metadata
+        description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _doc
+        description: Documentation?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: mdImgCode
+        description: Search filter for Code
+        required: false
+      - schema:
+          type: object
+        in: query
+        name: mdImgFile
+        description: Search filter for Image
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: row_module_id
+        description: Search filter for Module
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: row_module_id__mdl_name
+        description: Search filter for Module Name
+        required: false
+      tags:
+      - MDImage
+  /logout:
+    get:
+      security:
+      - bearerAuth: []
+      description: Logout
+      operationId: logout
+      responses:
+        '200':
+          description: Logout confirmation
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      tags:
+      - Application
+  /rest/MDDocument/{row_id}:
+    post:
+      security:
+      - bearerAuth: []
+      description: Create business object record
+      operationId: obj-mddocument-create
+      responses:
+        '200':
+          description: Created business object record
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      - schema:
+          type: string
+        in: query
+        name: mdDocCode
+        description: Code
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: mdDocURL
+        description: URL
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: mdDocTitle
+        description: Title
+        required: false
+      - schema:
+          type: object
+        in: query
+        name: mdDocFile
+        description: File
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: mdDocPublished
+        description: Published ?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: row_module_id
+        description: Module
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: row_module_id__mdl_name
+        description: Module Name
+        required: false
+      tags:
+      - MDDocument
+    get:
+      security:
+      - bearerAuth: []
+      description: Get business object record
+      operationId: obj-mddocument-get
+      responses:
+        '200':
+          description: Business object record
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_documents
+        description: Inline documents?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_objects
+        description: Inline objects?
+        required: false
+      tags:
+      - MDDocument
+    delete:
+      security:
+      - bearerAuth: []
+      description: Delete business object record
+      operationId: obj-mddocument-delete
+      responses:
+        '200':
+          description: Business object deletion confirmation
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      tags:
+      - MDDocument
+    put:
+      security:
+      - bearerAuth: []
+      description: Update business object record
+      operationId: obj-mddocument-update
+      responses:
+        '200':
+          description: Updated business object record
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      - schema:
+          type: string
+        in: query
+        name: mdDocCode
+        description: Code
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: mdDocURL
+        description: URL
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: mdDocTitle
+        description: Title
+        required: false
+      - schema:
+          type: object
+        in: query
+        name: mdDocFile
+        description: File
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: mdDocPublished
+        description: Published ?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: row_module_id
+        description: Module
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: row_module_id__mdl_name
+        description: Module Name
+        required: false
+      tags:
+      - MDDocument
+  /rest:
+    get:
+      security:
+      - bearerAuth: []
+      description: Application session information
+      operationId: info
+      responses:
+        '200':
+          description: Application information
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+            text/plain: {}
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: texts
+        description: Texts?
+        required: false
+      tags:
+      - Application
+  /rest/MDDocumentHistoric:
+    get:
+      security:
+      - bearerAuth: []
+      description: Get business object metadata or search records
+      operationId: obj-mddocumenthistoric-search
+      responses:
+        '200':
+          description: Business object metadata or records of search result
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: _metadata
+        description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _doc
+        description: Documentation?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: row_ref_id
+        description: Search filter for Reference
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: row_idx
+        description: Search filter for Version
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: created_by_hist
+        description: Search filter for User
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: created_dt_hist
+        description: Search filter for Date
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: mdDocCode
+        description: Search filter for Code
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: mdDocTitle
+        description: Search filter for Title
+        required: false
+      - schema:
+          type: object
+        in: query
+        name: mdDocFile
+        description: Search filter for File
+        required: false
+      tags:
+      - MDDocumentHistoric
+  /rest/MDDocumentHistoric/{row_id}:
+    post:
+      security:
+      - bearerAuth: []
+      description: Create business object record
+      operationId: obj-mddocumenthistoric-create
+      responses:
+        '200':
+          description: Created business object record
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      - schema:
+          type: string
+        in: query
+        name: row_ref_id
+        description: Reference
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: row_idx
+        description: Version
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: created_by_hist
+        description: User
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: created_dt_hist
+        description: Date
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: mdDocCode
+        description: Code
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: mdDocTitle
+        description: Title
+        required: false
+      - schema:
+          type: object
+        in: query
+        name: mdDocFile
+        description: File
+        required: false
+      tags:
+      - MDDocumentHistoric
+    get:
+      security:
+      - bearerAuth: []
+      description: Get business object record
+      operationId: obj-mddocumenthistoric-get
+      responses:
+        '200':
+          description: Business object record
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_documents
+        description: Inline documents?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_objects
+        description: Inline objects?
+        required: false
+      tags:
+      - MDDocumentHistoric
+    delete:
+      security:
+      - bearerAuth: []
+      description: Delete business object record
+      operationId: obj-mddocumenthistoric-delete
+      responses:
+        '200':
+          description: Business object deletion confirmation
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      tags:
+      - MDDocumentHistoric
+    put:
+      security:
+      - bearerAuth: []
+      description: Update business object record
+      operationId: obj-mddocumenthistoric-update
+      responses:
+        '200':
+          description: Updated business object record
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      - schema:
+          type: string
+        in: query
+        name: row_ref_id
+        description: Reference
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: row_idx
+        description: Version
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: created_by_hist
+        description: User
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: created_dt_hist
+        description: Date
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: mdDocCode
+        description: Code
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: mdDocTitle
+        description: Title
+        required: false
+      - schema:
+          type: object
+        in: query
+        name: mdDocFile
+        description: File
+        required: false
+      tags:
+      - MDDocumentHistoric
+  /rest/MDImage/{row_id}:
+    post:
+      security:
+      - bearerAuth: []
+      description: Create business object record
+      operationId: obj-mdimage-create
+      responses:
+        '200':
+          description: Created business object record
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      - schema:
+          type: string
+        in: query
+        name: mdImgCode
+        description: Code
+        required: false
+      - schema:
+          type: object
+        in: query
+        name: mdImgFile
+        description: Image
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: row_module_id
+        description: Module
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: row_module_id__mdl_name
+        description: Module Name
+        required: false
+      tags:
+      - MDImage
+    get:
+      security:
+      - bearerAuth: []
+      description: Get business object record
+      operationId: obj-mdimage-get
+      responses:
+        '200':
+          description: Business object record
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_documents
+        description: Inline documents?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_objects
+        description: Inline objects?
+        required: false
+      tags:
+      - MDImage
+    delete:
+      security:
+      - bearerAuth: []
+      description: Delete business object record
+      operationId: obj-mdimage-delete
+      responses:
+        '200':
+          description: Business object deletion confirmation
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      tags:
+      - MDImage
+    put:
+      security:
+      - bearerAuth: []
+      description: Update business object record
+      operationId: obj-mdimage-update
+      responses:
+        '200':
+          description: Updated business object record
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      - schema:
+          type: string
+        in: query
+        name: mdImgCode
+        description: Code
+        required: false
+      - schema:
+          type: object
+        in: query
+        name: mdImgFile
+        description: Image
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: row_module_id
+        description: Module
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: row_module_id__mdl_name
+        description: Module Name
+        required: false
+      tags:
+      - MDImage
+  /rest/MDDocument:
+    get:
+      security:
+      - bearerAuth: []
+      description: Get business object metadata or search records
+      operationId: obj-mddocument-search
+      responses:
+        '200':
+          description: Business object metadata or records of search result
+          content:
+            application/json: {}
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: _metadata
+        description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _doc
+        description: Documentation?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: mdDocCode
+        description: Search filter for Code
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: mdDocURL
+        description: Search filter for URL
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: mdDocTitle
+        description: Search filter for Title
+        required: false
+      - schema:
+          type: object
+        in: query
+        name: mdDocFile
+        description: Search filter for File
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: mdDocPublished
+        description: Search filter for Published ?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: row_module_id
+        description: Search filter for Module
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: row_module_id__mdl_name
+        description: Search filter for Module Name
+        required: false
+      tags:
+      - MDDocument
+info:
+  license:
+    name: Simplicite license
+    url: http://www.simplicitesoftware.com
+  contact:
+    name: Simplicite Software
+    url: http://www.simplicitesoftware.com
+    email: contact@simplicitesoftware.com
+  description: REST APIs for Markdown
+  title: Markdown
+  version: '4.0'
