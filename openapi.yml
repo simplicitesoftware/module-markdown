@@ -1,4 +1,94 @@
 components:
+  schemas:
+    MDImage:
+      type: object
+      properties:
+        row_module_id__mdl_name:
+          description: Module Name
+          type: string
+        mdImgCode:
+          description: Code
+          type: string
+        mdImgFile:
+          description: Image
+          type: object
+        row_module_id:
+          description: Module
+          type: string
+        row_id:
+          description: ID
+          type: string
+    ArrayOfMDDocumentHistoric:
+      type: array
+      items:
+        $ref: '#/components/schemas/MDDocumentHistoric'
+    MDDocument:
+      type: object
+      properties:
+        row_module_id__mdl_name:
+          description: Module Name
+          type: string
+        mdDocTitle:
+          description: Title
+          type: string
+        mdDocCode:
+          description: Code
+          type: string
+        mdDocFile:
+          description: File
+          type: object
+        row_module_id:
+          description: Module
+          type: string
+        mdDocPublished:
+          description: Published ?
+          type: boolean
+        row_id:
+          description: ID
+          type: string
+        mdDocURL:
+          description: URL
+          type: string
+    ArrayOfMDDocument:
+      type: array
+      items:
+        $ref: '#/components/schemas/MDDocument'
+    MDDocumentHistoricActionResult:
+      type: object
+      properties:
+        result:
+          description: Action result
+    ArrayOfMDImage:
+      type: array
+      items:
+        $ref: '#/components/schemas/MDImage'
+    MDDocumentHistoric:
+      type: object
+      properties:
+        row_idx:
+          description: Version
+          type: integer
+        mdDocTitle:
+          description: Title
+          type: string
+        mdDocCode:
+          description: Code
+          type: string
+        mdDocFile:
+          description: File
+          type: object
+        created_dt_hist:
+          description: Date
+          type: string
+        row_id:
+          description: ID
+          type: string
+        created_by_hist:
+          description: User
+          type: string
+        row_ref_id:
+          description: Reference
+          type: string
   securitySchemes:
     basicAuth:
       scheme: basic
@@ -49,7 +139,9 @@ paths:
         '200':
           description: Business object metadata or records of search result
           content:
-            application/json: {}
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArrayOfMDImage'
         '401':
           description: Authentication error
           content:
@@ -120,7 +212,9 @@ paths:
         '200':
           description: Created business object record
           content:
-            application/json: {}
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MDDocument'
         '401':
           description: Authentication error
           content:
@@ -184,6 +278,14 @@ paths:
       responses:
         '200':
           description: Business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MDDocument'
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
       parameters:
       - schema:
           type: string
@@ -219,8 +321,6 @@ paths:
       responses:
         '200':
           description: Business object deletion confirmation
-          content:
-            application/json: {}
         '401':
           description: Authentication error
           content:
@@ -243,7 +343,9 @@ paths:
         '200':
           description: Updated business object record
           content:
-            application/json: {}
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MDDocument'
         '401':
           description: Authentication error
           content:
@@ -334,7 +436,9 @@ paths:
         '200':
           description: Business object metadata or records of search result
           content:
-            application/json: {}
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArrayOfMDDocumentHistoric'
         '401':
           description: Authentication error
           content:
@@ -406,7 +510,9 @@ paths:
         '200':
           description: Created business object record
           content:
-            application/json: {}
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MDDocumentHistoric'
         '401':
           description: Authentication error
           content:
@@ -470,6 +576,14 @@ paths:
       responses:
         '200':
           description: Business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MDDocumentHistoric'
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
       parameters:
       - schema:
           type: string
@@ -505,8 +619,6 @@ paths:
       responses:
         '200':
           description: Business object deletion confirmation
-          content:
-            application/json: {}
         '401':
           description: Authentication error
           content:
@@ -529,7 +641,9 @@ paths:
         '200':
           description: Updated business object record
           content:
-            application/json: {}
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MDDocumentHistoric'
         '401':
           description: Authentication error
           content:
@@ -595,7 +709,9 @@ paths:
         '200':
           description: Created business object record
           content:
-            application/json: {}
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MDImage'
         '401':
           description: Authentication error
           content:
@@ -641,6 +757,14 @@ paths:
       responses:
         '200':
           description: Business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MDImage'
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
       parameters:
       - schema:
           type: string
@@ -676,8 +800,6 @@ paths:
       responses:
         '200':
           description: Business object deletion confirmation
-          content:
-            application/json: {}
         '401':
           description: Authentication error
           content:
@@ -700,7 +822,9 @@ paths:
         '200':
           description: Updated business object record
           content:
-            application/json: {}
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MDImage'
         '401':
           description: Authentication error
           content:
@@ -738,6 +862,32 @@ paths:
         required: false
       tags:
       - MDImage
+  /rest/MDDocumentHistoric/{row_id}/MDDocDiff:
+    get:
+      security:
+      - bearerAuth: []
+      description: Call custom action for object record
+      operationId: obj-mddocumenthistoric-action
+      responses:
+        '200':
+          description: Custom action result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MDDocumentHistoricActionResult'
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID
+        required: true
+      tags:
+      - MDDocumentHistoric
   /rest/MDDocument:
     get:
       security:
@@ -748,7 +898,9 @@ paths:
         '200':
           description: Business object metadata or records of search result
           content:
-            application/json: {}
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArrayOfMDDocument'
         '401':
           description: Authentication error
           content:
