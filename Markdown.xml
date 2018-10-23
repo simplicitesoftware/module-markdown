@@ -63,14 +63,6 @@
 		<rsp_activ>1</rsp_activ>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
 	</data>
-	<data>
-		<rsp_login_id.usr_login>public</rsp_login_id.usr_login>
-		<rsp_group_id.grp_name>MD_READER</rsp_group_id.grp_name>
-		<rsp_start_dt>2000-01-01</rsp_start_dt>
-		<rsp_end_dt/>
-		<rsp_activ>1</rsp_activ>
-		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
-	</data>
 </object>
 <object>
 	<name>Field</name>
@@ -386,7 +378,7 @@
 		<obo_class/>
 		<obo_script_id>ObjectInternal/MDDocument.js</obo_script_id>
 		<obo_usets>1</obo_usets>
-		<obo_nosearch>1</obo_nosearch>
+		<obo_nosearch>0</obo_nosearch>
 		<obo_comment><![CDATA[Markdown document]]></obo_comment>
 		<obo_type>O</obo_type>
 		<obo_searchspec/>
@@ -500,7 +492,7 @@
 		<obo_class/>
 		<obo_script_id>ObjectInternal/MDImage.js</obo_script_id>
 		<obo_usets>1</obo_usets>
-		<obo_nosearch>1</obo_nosearch>
+		<obo_nosearch>0</obo_nosearch>
 		<obo_comment><![CDATA[Markdown image]]></obo_comment>
 		<obo_type>O</obo_type>
 		<obo_searchspec/>

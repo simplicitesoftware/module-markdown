@@ -1,5 +1,11 @@
 components:
   schemas:
+    ActionResult:
+      type: object
+      properties:
+        result:
+          description: Action result
+          type: string
     MDImage:
       type: object
       properties:
@@ -49,15 +55,19 @@ components:
         mdDocURL:
           description: URL
           type: string
+    PublicationResult:
+      type: object
+      properties:
+        mime:
+          description: MIME type
+          type: string
+        content:
+          description: Content (plain text or base64 encoded)
+          type: string
     ArrayOfMDDocument:
       type: array
       items:
         $ref: '#/components/schemas/MDDocument'
-    MDDocumentHistoricActionResult:
-      type: object
-      properties:
-        result:
-          description: Action result
     ArrayOfMDImage:
       type: array
       items:
@@ -101,6 +111,32 @@ servers:
 - url: https://dev40.dev.simplicite.io/api
 openapi: 3.0.0
 paths:
+  /rest/MDDocumentHistoric/{row_id}/action:MDDocDiff:
+    get:
+      security:
+      - bearerAuth: []
+      description: Call custom action for one object record or all object records
+      operationId: obj-mddocumenthistoric-action-mddocdiff
+      responses:
+        '200':
+          description: Custom action result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ActionResult'
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or _ for all row IDs)
+        required: true
+      tags:
+      - MDDocumentHistoric
   /login:
     get:
       security:
@@ -152,6 +188,30 @@ paths:
         in: query
         name: _metadata
         description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _count
+        description: Count?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: _indexsearch
+        description: Index search query
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: _crosstab
+        description: Apply pivot table
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _crosstabcubes
+        description: pivot table data as cubes?
         required: false
       - schema:
           type: boolean
@@ -224,7 +284,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       - schema:
           type: string
@@ -291,7 +351,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       - schema:
           type: boolean
@@ -330,7 +390,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       tags:
       - MDDocument
@@ -355,7 +415,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       - schema:
           type: string
@@ -453,6 +513,30 @@ paths:
       - schema:
           type: boolean
         in: query
+        name: _count
+        description: Count?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: _indexsearch
+        description: Index search query
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: _crosstab
+        description: Apply pivot table
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _crosstabcubes
+        description: pivot table data as cubes?
+        required: false
+      - schema:
+          type: boolean
+        in: query
         name: _doc
         description: Documentation?
         required: false
@@ -522,7 +606,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       - schema:
           type: string
@@ -589,7 +673,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       - schema:
           type: boolean
@@ -628,7 +712,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       tags:
       - MDDocumentHistoric
@@ -653,7 +737,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       - schema:
           type: string
@@ -721,7 +805,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       - schema:
           type: string
@@ -770,7 +854,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       - schema:
           type: boolean
@@ -809,7 +893,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       tags:
       - MDImage
@@ -834,7 +918,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       - schema:
           type: string
@@ -862,32 +946,6 @@ paths:
         required: false
       tags:
       - MDImage
-  /rest/MDDocumentHistoric/{row_id}/MDDocDiff:
-    get:
-      security:
-      - bearerAuth: []
-      description: Call custom action for object record
-      operationId: obj-mddocumenthistoric-action
-      responses:
-        '200':
-          description: Custom action result
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/MDDocumentHistoricActionResult'
-        '401':
-          description: Authentication error
-          content:
-            application/json: {}
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: row_id
-        description: row ID
-        required: true
-      tags:
-      - MDDocumentHistoric
   /rest/MDDocument:
     get:
       security:
@@ -911,6 +969,30 @@ paths:
         in: query
         name: _metadata
         description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _count
+        description: Count?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: _indexsearch
+        description: Index search query
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: _crosstab
+        description: Apply pivot table
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _crosstabcubes
+        description: pivot table data as cubes?
         required: false
       - schema:
           type: boolean
