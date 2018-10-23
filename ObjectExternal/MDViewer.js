@@ -200,8 +200,9 @@ MDViewer.display = function(params) {
 	if (Tool.isEmpty(md)) {
 		title = "Error";
 		md = Tool.toString("### Error\n\nNo markdown content for specified parameters");
-	} else
+	} else {
 		md = MDViewer.substAll.call(this, params.getBaseLocation(), md);
+	}
 
 	md = MarkdownTool.toHTMLPage(title, md);
 	if (action)
