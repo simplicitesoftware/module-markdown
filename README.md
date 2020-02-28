@@ -1,4 +1,11 @@
-![](https://www.simplicite.io/resources//logos/logo250.png)
+<!--
+ ___ _            _ _    _ _    __
+/ __(_)_ __  _ __| (_)__(_) |_ /_/
+\__ \ | '  \| '_ \ | / _| |  _/ -_)
+|___/_|_|_|_| .__/_|_\__|_|\__\___|
+            |_| 
+-->
+![](https://docs.simplicite.io//logos/logo250.png)
 * * *
 
 `Markdown` module definition
@@ -22,10 +29,6 @@ Markdown document
 | `mdDocPublished`                                             | boolean                                  |          | yes       |          | Is document published?                                                           |
 | `row_module_id` link to **`Module`**                         | id                                       | yes      | yes       |          | -                                                                                |
 | _Ref. `row_module_id.mdl_name`_                              | _regexp(100)_                            |          |           |          | -                                                                                |
-
-### Custom actions
-
-No custom action
 
 `MDDocumentHistoric` business object definition
 -----------------------------------------------
@@ -61,10 +64,6 @@ Markdown image
 | `mdImgFile`                                                  | image                                    | yes      | yes       |          | Image                                                                            |
 | `row_module_id` link to **`Module`**                         | id                                       | yes      | yes       |          | -                                                                                |
 | _Ref. `row_module_id.mdl_name`_                              | _regexp(100)_                            |          |           |          | -                                                                                |
-
-### Custom actions
-
-No custom action
 
 `MDDiff` external object definition
 -----------------------------------

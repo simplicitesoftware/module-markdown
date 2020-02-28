@@ -5,7 +5,7 @@ MDViewer.getMDImage = function(code) {
 	var rows = img.search();
 	if (rows.size() == 1) {
 		var row = rows.get(0);
-		img.setValues(row);
+		img.setValues(row, false);
 		return img.getField("mdImgFile").getDocument(this.getGrant());
 	} else {
 		console.error("No markdown image for code " + code);
@@ -20,7 +20,7 @@ MDViewer.getModelImage = function(name) {
 	var rows = mdl.search();
 	if (rows.size() == 1) {
 		var row = rows.get(0);
-		mdl.setValues(row);
+		mdl.setValues(row, false);
 		return mdl.getField("mod_image").getDocument(this.getGrant());
 	} else {
 		console.error("No model image for name " + name);
@@ -122,22 +122,27 @@ MDViewer.substAll = function(loc, d) {
 		}
 	} catch(e) {}
 
-	// Substitute resource tags
+	// Substitute disposition resource tags
 	try { // Under silent try/catch for upward compatibility
 		m = MDViewer.findTag.call(this, md, "RESOURCE");
-		while (!Tool.isEmpty(m)) {
-			var res = HTMLTool.getResourceMDContent(this.getGrant(), m);
-			if (res) {
-				md = MDViewer.substTag.call(this, md, "RESOURCE", Tool.toString(res));
+		while (m) {
+			var res = HTMLTool.getResourceMDContent(this.getGrant(), m); // Try as markdown content
+			if (res && res.length() > 0) {
+				md = MDViewer.substTag.call(this, md, "RESOURCE", res);
 			} else {
-				res = this.getGrant().getResource(Resource.TYPE_IMAGE, m, null, null);
-				img = res ? res.getDocument(this.getGrant()) : null;
-				md = MDViewer.substTag.call(this, md, "RESOURCE", img ? HTMLTool.getImageDataURL(img.getMIME(), img.getBytes(true)) : "");
+				res = this.getGrant().getResource(Resource.TYPE_IMAGE, m, null, null); // Then try as image
+				if (res) {
+					img = res.getDocument(this.getGrant());
+					md = MDViewer.substTag.call(this, md, "RESOURCE", img ? HTMLTool.getImageDataURL(img.getMIME(), img.getBytes(true)) : "");
+				} else {
+					res = HTMLTool.getResourcePDFURL(this.getGrant(), m); // Then try as PDF
+					md = MDViewer.substTag.call(this, md, "RESOURCE", res ? Tool.toString(res) : "");
+				}
 			}
 			m = MDViewer.findTag.call(this, md, "RESOURCE");
 		}
 	} catch(e) {}
-	
+
 	return md;
 };
 
@@ -149,7 +154,7 @@ MDViewer.display = function(params) {
 	this.addExtraJS(HTMLTool.highlightJS());	
 	
 	var title = this.getDisplay();
-	var md;
+	var md = "";
 
 	var code = params.getParameter("doc", "");
 	if (!Tool.isEmpty(code)) {
@@ -161,7 +166,7 @@ MDViewer.display = function(params) {
 		var rows = doc.search();
 		if (rows.size() == 1) {
 			var row = rows.get(0);
-			doc.setValues(row);
+			doc.setValues(row, false);
 			title = doc.getFieldValue("mdDocTitle");
 			var d = doc.getField("mdDocFile");
 			if (!d.isEmpty())
@@ -204,9 +209,9 @@ MDViewer.display = function(params) {
 		md = MDViewer.substAll.call(this, params.getBaseLocation(), md);
 	}
 
-	md = MarkdownTool.toHTMLPage(title, md);
-	if (action)
-		this.setHTML(md);
-	else
-		return md;
+	if (action) {
+		this.appendCSSInclude(HTMLTool.docCSS());
+		this.setHTML("<div class=\"doc\">" + MarkdownTool.toHTML(md) + "</div>");
+	} else
+		return MarkdownTool.toHTMLPage(title, md);
 };

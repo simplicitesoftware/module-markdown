@@ -8,5 +8,5 @@ MDDocument.preSave = function() {
 
 MDDocument.getMappedFilePath = function(f) {
 	if (f.getName() == "mdDocFile")
-		return this.getName() + "/" + this.getFieldValue("mdDocCode") + ".md";
+		return "docs/" + this.getName() + "/" + this.getFieldValue("mdDocCode") + ".md";
 };

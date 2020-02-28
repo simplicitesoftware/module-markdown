@@ -14,6 +14,6 @@ MDDocumentHistoric.diff = function() {
 
 MDDocumentHistoric.isActionEnable = function(row, action) {
 	if (action == "MDDocDiff")
-		return row ? !Tool.isEmpty(row[this.getIndex("mdDocFile")]) : !this.getField("mdDocFile").isEmpty();
+		return row ? !Tool.isEmpty(row[this.getFieldIndex("mdDocFile")]) : !this.getField("mdDocFile").isEmpty();
 	return true;
 };

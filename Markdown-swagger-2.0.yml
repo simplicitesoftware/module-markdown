@@ -1,0 +1,996 @@
+#  ___ _            _ _    _ _    __
+# / __(_)_ __  _ __| (_)__(_) |_ /_/
+# \__ \ | '  \| '_ \ | / _| |  _/ -_)
+# |___/_|_|_|_| .__/_|_\__|_|\__\___|
+#             |_| Module: Markdown 4.0
+paths:
+  /rest/MDDocumentHistoric/{row_id}/action:MDDocDiff:
+    get:
+      summary: Call a custom action for a MDDocumentHistoric business object record
+        or for all records
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-mddocumenthistoric-action-mddocdiff
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/ActionResult'
+          description: Success in calling the custom action
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      tags:
+      - MDDocumentHistoric
+  /login:
+    get:
+      summary: Login (obtain bearer token)
+      security:
+      - basicAuth: []
+      produces:
+      - text/plain
+      - application/json
+      operationId: login
+      responses:
+        '200':
+          description: Successful login
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+      parameters:
+      - in: query
+        name: _output
+        description: Optional output format
+        type: string
+        required: false
+        enum:
+        - json
+        - oauth2
+        - token
+      tags:
+      - session
+  /rest/MDImage:
+    get:
+      summary: Search MDImage business object records or get contextualized metadata
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-mdimage-search
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/ArrayOfMDImage'
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: query
+        name: _metadata
+        description: Metadata?
+        type: boolean
+        required: false
+      - in: query
+        name: _count
+        description: Count?
+        type: boolean
+        required: false
+      - in: query
+        name: _doc
+        description: Documentation?
+        type: boolean
+        required: false
+      - in: query
+        name: mdImgCode
+        description: Search filter for Markdown image code
+        type: string
+        required: false
+      - in: query
+        name: mdImgFile
+        description: Search filter for Image
+        type: string
+        required: false
+      - in: query
+        name: row_module_id
+        description: Search filter for Module
+        type: string
+        required: false
+      - in: query
+        name: row_module_id__mdl_name
+        description: Search filter for Module Name
+        type: string
+        required: false
+      tags:
+      - MDImage
+  /logout:
+    get:
+      summary: Logout (revoke bearer token)
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: logout
+      responses:
+        '200':
+          description: Successfull logout
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+      tags:
+      - session
+  /rest/MDDocument/{row_id}:
+    post:
+      summary: Create a new MDDocumentbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-mddocument-create
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/MDDocument'
+          description: Success in creating a new business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/MDDocument'
+        in: body
+        name: body
+      tags:
+      - MDDocument
+      consumes:
+      - application/json
+    get:
+      summary: Get a MDDocument business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-mddocument-get
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/MDDocument'
+          description: Success in getting a single business object record
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - in: query
+        name: _inline_documents
+        description: Inline documents?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_objects
+        description: Inline objects?
+        type: boolean
+        required: false
+      tags:
+      - MDDocument
+    delete:
+      summary: Delete a MDDocument business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-mddocument-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      tags:
+      - MDDocument
+    put:
+      summary: Update a MDDocumentbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-mddocument-update
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/MDDocument'
+          description: Success in updating a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/MDDocument'
+        in: body
+        name: body
+      tags:
+      - MDDocument
+      consumes:
+      - application/json
+  /rest/MDDocumentHistoric:
+    get:
+      summary: Search MDDocumentHistoric business object records or get contextualized
+        metadata
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-mddocumenthistoric-search
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/ArrayOfMDDocumentHistoric'
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: query
+        name: _metadata
+        description: Metadata?
+        type: boolean
+        required: false
+      - in: query
+        name: _count
+        description: Count?
+        type: boolean
+        required: false
+      - in: query
+        name: _doc
+        description: Documentation?
+        type: boolean
+        required: false
+      - in: query
+        name: row_ref_id
+        description: Search filter for Reference
+        type: string
+        required: false
+      - in: query
+        name: row_idx
+        description: Search filter for Version
+        type: integer
+        required: false
+      - in: query
+        name: created_by_hist
+        description: Search filter for User
+        type: string
+        required: false
+      - in: query
+        name: created_dt_hist
+        description: Search filter for Date
+        type: string
+        required: false
+      - in: query
+        name: mdDocCode
+        description: Search filter for Document code
+        type: string
+        required: false
+      - in: query
+        name: mdDocTitle
+        description: Search filter for Document title
+        type: string
+        required: false
+      - in: query
+        name: mdDocFile
+        description: Search filter for Markdown file
+        type: string
+        required: false
+      tags:
+      - MDDocumentHistoric
+  /rest/MDDocumentHistoric/{row_id}:
+    post:
+      summary: Create a new MDDocumentHistoricbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-mddocumenthistoric-create
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/MDDocumentHistoric'
+          description: Success in creating a new business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/MDDocumentHistoric'
+        in: body
+        name: body
+      tags:
+      - MDDocumentHistoric
+      consumes:
+      - application/json
+    get:
+      summary: Get a MDDocumentHistoric business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-mddocumenthistoric-get
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/MDDocumentHistoric'
+          description: Success in getting a single business object record
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - in: query
+        name: _inline_documents
+        description: Inline documents?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_objects
+        description: Inline objects?
+        type: boolean
+        required: false
+      tags:
+      - MDDocumentHistoric
+    delete:
+      summary: Delete a MDDocumentHistoric business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-mddocumenthistoric-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      tags:
+      - MDDocumentHistoric
+    put:
+      summary: Update a MDDocumentHistoricbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-mddocumenthistoric-update
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/MDDocumentHistoric'
+          description: Success in updating a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/MDDocumentHistoric'
+        in: body
+        name: body
+      tags:
+      - MDDocumentHistoric
+      consumes:
+      - application/json
+  /rest/MDImage/{row_id}:
+    post:
+      summary: Create a new MDImagebusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-mdimage-create
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/MDImage'
+          description: Success in creating a new business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/MDImage'
+        in: body
+        name: body
+      tags:
+      - MDImage
+      consumes:
+      - application/json
+    get:
+      summary: Get a MDImage business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-mdimage-get
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/MDImage'
+          description: Success in getting a single business object record
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - in: query
+        name: _inline_documents
+        description: Inline documents?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_objects
+        description: Inline objects?
+        type: boolean
+        required: false
+      tags:
+      - MDImage
+    delete:
+      summary: Delete a MDImage business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-mdimage-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      tags:
+      - MDImage
+    put:
+      summary: Update a MDImagebusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-mdimage-update
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/MDImage'
+          description: Success in updating a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/MDImage'
+        in: body
+        name: body
+      tags:
+      - MDImage
+      consumes:
+      - application/json
+  /rest/MDDocument:
+    get:
+      summary: Search MDDocument business object records or get contextualized metadata
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-mddocument-search
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/ArrayOfMDDocument'
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: query
+        name: _metadata
+        description: Metadata?
+        type: boolean
+        required: false
+      - in: query
+        name: _count
+        description: Count?
+        type: boolean
+        required: false
+      - in: query
+        name: _doc
+        description: Documentation?
+        type: boolean
+        required: false
+      - in: query
+        name: mdDocCode
+        description: Search filter for Document code
+        type: string
+        required: false
+      - in: query
+        name: mdDocURL
+        description: Search filter for Document URL
+        type: string
+        required: false
+      - in: query
+        name: mdDocTitle
+        description: Search filter for Document title
+        type: string
+        required: false
+      - in: query
+        name: mdDocFile
+        description: Search filter for Markdown file
+        type: string
+        required: false
+      - in: query
+        name: mdDocPublished
+        description: Search filter for Is document published?
+        type: boolean
+        required: false
+      - in: query
+        name: row_module_id
+        description: Search filter for Module
+        type: string
+        required: false
+      - in: query
+        name: row_module_id__mdl_name
+        description: Search filter for Module Name
+        type: string
+        required: false
+      tags:
+      - MDDocument
+  /:
+    get:
+      summary: Get user session information
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: info
+      responses:
+        '200':
+          description: Success in getting user session information
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+      parameters:
+      - in: query
+        name: texts
+        description: Texts?
+        type: boolean
+        required: false
+      tags:
+      - session
+securityDefinitions:
+  basicAuth:
+    type: basic
+  bearerAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+definitions:
+  Error404:
+    type: object
+    properties:
+      error:
+        description: Error message
+        type: string
+      status:
+        description: Error status
+        type: integer
+        enum:
+        - 404
+  MDImage:
+    type: object
+    properties:
+      row_module_id__mdl_name:
+        description: Module Name
+        type: string
+      mdImgCode:
+        description: Markdown image code
+        type: string
+      mdImgFile:
+        description: Image
+        type: object
+      row_module_id:
+        description: Module
+        type: string
+      row_id:
+        description: Unique technical row ID
+        type: string
+  ArrayOfMDDocumentHistoric:
+    type: array
+    items:
+      $ref: '#/definitions/MDDocumentHistoric'
+  MDDocument:
+    type: object
+    properties:
+      row_module_id__mdl_name:
+        description: Module Name
+        type: string
+      mdDocTitle:
+        description: Document title
+        type: string
+      mdDocCode:
+        description: Document code
+        type: string
+      mdDocFile:
+        description: Markdown file
+        type: object
+      row_module_id:
+        description: Module
+        type: string
+      mdDocPublished:
+        description: Is document published?
+        type: boolean
+      row_id:
+        description: Unique technical row ID
+        type: string
+      mdDocURL:
+        description: Document URL
+        type: string
+  PublicationResult:
+    type: object
+    properties:
+      mime:
+        description: MIME type
+        type: string
+      content:
+        description: Content (plain text or base64 encoded)
+        type: string
+  ArrayOfMDDocument:
+    type: array
+    items:
+      $ref: '#/definitions/MDDocument'
+  ArrayOfMDImage:
+    type: array
+    items:
+      $ref: '#/definitions/MDImage'
+  ActionResult:
+    type: object
+    properties:
+      result:
+        description: Action result
+        type: string
+  TreeviewData:
+    type: object
+    properties:
+      item:
+        description: Object item with lists of linked objects' items
+        type: object
+  Error400:
+    type: object
+    properties:
+      error:
+        description: Error message
+        type: string
+      status:
+        description: Error status
+        type: integer
+        enum:
+        - 400
+  Error401:
+    type: object
+    properties:
+      error:
+        description: Error message
+        type: string
+      status:
+        description: Error status
+        type: integer
+        enum:
+        - 401
+  Error500:
+    type: object
+    properties:
+      error:
+        description: Error message
+        type: string
+      status:
+        description: Error status
+        type: integer
+        enum:
+        - 500
+  Error403:
+    type: object
+    properties:
+      error:
+        description: Error message
+        type: string
+      status:
+        description: Error status
+        type: integer
+        enum:
+        - 403
+  MDDocumentHistoric:
+    type: object
+    properties:
+      row_idx:
+        description: Version
+        type: integer
+      mdDocTitle:
+        description: Document title
+        type: string
+      mdDocCode:
+        description: Document code
+        type: string
+      mdDocFile:
+        description: Markdown file
+        type: object
+      created_dt_hist:
+        description: Date
+        type: string
+      row_id:
+        description: Unique technical row ID
+        type: string
+      created_by_hist:
+        description: User
+        type: string
+      row_ref_id:
+        description: Reference
+        type: string
+swagger: '2.0'
+info:
+  license:
+    name: Simplicite license
+    url: http://www.simplicitesoftware.com
+  contact:
+    name: Simplicite Software
+    url: http://www.simplicitesoftware.com
+    email: contact@simplicitesoftware.com
+  description: API for module Markdown
+  title: Markdown
+  version: '4.0'
+tags:
+- name: MDDocument
+  description: MD document
+- name: MDDocumentHistoric
+  description: MD document (hist)
+- name: MDImage
+  description: MD image

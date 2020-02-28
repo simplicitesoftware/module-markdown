@@ -6,8 +6,14 @@
 	<data>
 		<mdl_name>Markdown</mdl_name>
 		<mdl_version>4.0</mdl_version>
-		<mdl_url><![CDATA[https://www.simplicite.io/resources/modules/markdown-app-4.0.xml]]></mdl_url>
-		<mdl_lastupd>2018-06-22 18:14:48</mdl_lastupd>
+		<mdl_prefix>md</mdl_prefix>
+		<mdl_url><![CDATA[{
+	"type": "git",
+	"origin": {
+		"uri": "https://github.com/simplicitesoftware/module-markdown.git"
+	}
+}]]></mdl_url>
+		<mdl_lastupd>2020-02-28 22:40:02</mdl_lastupd>
 		<mdl_comment><![CDATA[Markdown documentation module]]></mdl_comment>
 	</data>
 </object>
@@ -17,9 +23,9 @@
 	<data>
 		<mod_name>Markdown</mod_name>
 		<mod_template_id.mtp_name>ModelObject</mod_template_id.mtp_name>
-		<mod_doc>Model/Markdown.svg</mod_doc>
+		<mod_doc>files/Model/Markdown.svg</mod_doc>
 		<mod_json/>
-		<mod_image>Model/Markdown.png</mod_image>
+		<mod_image>files/Model/Markdown.png</mod_image>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
 	</data>
 </object>
@@ -63,6 +69,14 @@
 		<rsp_activ>1</rsp_activ>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
 	</data>
+	<data>
+		<rsp_login_id.usr_login>public</rsp_login_id.usr_login>
+		<rsp_group_id.grp_name>MD_READER</rsp_group_id.grp_name>
+		<rsp_start_dt>2000-01-01</rsp_start_dt>
+		<rsp_end_dt/>
+		<rsp_activ>1</rsp_activ>
+		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
+	</data>
 </object>
 <object>
 	<name>Field</name>
@@ -76,9 +90,11 @@
 		<fld_fonctid>1</fld_fonctid>
 		<fld_research>1</fld_research>
 		<fld_researchreq>0</fld_researchreq>
+		<fld_sort>C</fld_sort>
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>15</fld_type>
 		<fld_type_id.flt_code>CONFIG</fld_type_id.flt_code>
 		<fld_enumlist/>
@@ -87,6 +103,7 @@
 		<fld_size>50</fld_size>
 		<fld_minsize/>
 		<fld_precision/>
+		<fld_fromdate_id.fld_name/>
 		<fld_dfault/>
 		<fld_indexable>0</fld_indexable>
 		<fld_autocomp>0</fld_autocomp>
@@ -110,9 +127,11 @@
 		<fld_fonctid>0</fld_fonctid>
 		<fld_research/>
 		<fld_researchreq/>
+		<fld_sort>C</fld_sort>
 		<fld_more>1</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>17</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -121,6 +140,7 @@
 		<fld_size>11</fld_size>
 		<fld_minsize/>
 		<fld_precision/>
+		<fld_fromdate_id.fld_name/>
 		<fld_dfault/>
 		<fld_indexable>0</fld_indexable>
 		<fld_autocomp>0</fld_autocomp>
@@ -144,9 +164,11 @@
 		<fld_fonctid>0</fld_fonctid>
 		<fld_research>1</fld_research>
 		<fld_researchreq>0</fld_researchreq>
+		<fld_sort>C</fld_sort>
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>8</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -155,6 +177,7 @@
 		<fld_size>1</fld_size>
 		<fld_minsize/>
 		<fld_precision/>
+		<fld_fromdate_id.fld_name/>
 		<fld_dfault><![CDATA[0]]></fld_dfault>
 		<fld_indexable>0</fld_indexable>
 		<fld_autocomp>0</fld_autocomp>
@@ -178,9 +201,11 @@
 		<fld_fonctid>0</fld_fonctid>
 		<fld_research>1</fld_research>
 		<fld_researchreq>0</fld_researchreq>
+		<fld_sort>C</fld_sort>
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -189,6 +214,7 @@
 		<fld_size>100</fld_size>
 		<fld_minsize/>
 		<fld_precision/>
+		<fld_fromdate_id.fld_name/>
 		<fld_dfault/>
 		<fld_indexable>0</fld_indexable>
 		<fld_autocomp>0</fld_autocomp>
@@ -212,9 +238,11 @@
 		<fld_fonctid>0</fld_fonctid>
 		<fld_research>0</fld_research>
 		<fld_researchreq>0</fld_researchreq>
+		<fld_sort>C</fld_sort>
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>10</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -223,6 +251,7 @@
 		<fld_size>100</fld_size>
 		<fld_minsize/>
 		<fld_precision/>
+		<fld_fromdate_id.fld_name/>
 		<fld_dfault/>
 		<fld_indexable>0</fld_indexable>
 		<fld_autocomp>0</fld_autocomp>
@@ -246,9 +275,11 @@
 		<fld_fonctid>1</fld_fonctid>
 		<fld_research>1</fld_research>
 		<fld_researchreq>0</fld_researchreq>
+		<fld_sort>C</fld_sort>
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>15</fld_type>
 		<fld_type_id.flt_code>CONFIG</fld_type_id.flt_code>
 		<fld_enumlist/>
@@ -257,6 +288,7 @@
 		<fld_size>50</fld_size>
 		<fld_minsize/>
 		<fld_precision/>
+		<fld_fromdate_id.fld_name/>
 		<fld_dfault/>
 		<fld_indexable>0</fld_indexable>
 		<fld_autocomp>0</fld_autocomp>
@@ -280,9 +312,11 @@
 		<fld_fonctid>0</fld_fonctid>
 		<fld_research/>
 		<fld_researchreq/>
+		<fld_sort>C</fld_sort>
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>20</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -291,6 +325,7 @@
 		<fld_size>11</fld_size>
 		<fld_minsize/>
 		<fld_precision>100</fld_precision>
+		<fld_fromdate_id.fld_name/>
 		<fld_dfault/>
 		<fld_indexable>0</fld_indexable>
 		<fld_autocomp>0</fld_autocomp>
@@ -331,6 +366,77 @@
 	</data>
 </object>
 <object>
+	<name>Template</name>
+	<action>upsert</action>
+	<data>
+		<tpl_name>MDDocument</tpl_name>
+		<tpl_ui><![CDATA[<div class="area" data-area="1"></div>
+]]></tpl_ui>
+		<tpl_min/>
+		<tpl_image/>
+		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tpl_name>MDImage</tpl_name>
+		<tpl_ui><![CDATA[<div class="area" data-area="1"></div>
+]]></tpl_ui>
+		<tpl_min/>
+		<tpl_image/>
+		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
+	</data>
+</object>
+<object>
+	<name>ObjectFieldArea</name>
+	<action>upsert</action>
+	<data>
+		<ofa_name>MDDocument-1</ofa_name>
+		<ofa_position>1</ofa_position>
+		<ofa_title>0</ofa_title>
+		<ofa_ui><![CDATA[<div>
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="field" data-field="mdDocCode"></div>
+      <div class="field" data-field="row_module_id"></div>
+      <div class="field" data-field="row_module_id__mdl_name"></div>
+    </div>
+    <div class="col-sm-7">
+      <div class="field" data-field="mdDocTitle"></div>
+      <div class="field" data-field="mdDocURL"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-9">
+      <div class="field" data-field="mdDocFile"></div>
+    </div>
+    <div class="col-sm-3">
+      <div class="field" data-field="mdDocPublished"></div>
+    </div>
+  </div>
+</div>
+]]></ofa_ui>
+		<ofa_icon/>
+		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
+	</data>
+	<data>
+		<ofa_name>MDImage-1</ofa_name>
+		<ofa_position>1</ofa_position>
+		<ofa_title>0</ofa_title>
+		<ofa_ui><![CDATA[<div class="row">
+  <div class="col-sm-4">
+    <div class="field" data-field="mdImgCode"></div>
+    <div class="field" data-field="row_module_id"></div>
+    <div class="field" data-field="row_module_id__mdl_name"></div>
+  </div>
+  <div class="col-sm-8">
+    <div class="field" data-field="mdImgFile"></div>
+  </div>
+</div>
+]]></ofa_ui>
+		<ofa_icon/>
+		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
+	</data>
+</object>
+<object>
 	<name>Domain</name>
 	<action>upsert</action>
 	<data>
@@ -339,7 +445,9 @@
 		<obd_type>D</obd_type>
 		<obd_view_id.viw_name/>
 		<obd_nohome>0</obd_nohome>
-		<obd_icon>feedback</obd_icon>
+		<obd_icon>img/color/markdown</obd_icon>
+		<obd_order>96000</obd_order>
+		<obd_domain_id.obd_name/>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
 	</data>
 </object>
@@ -353,7 +461,7 @@
 		<obe_comment><![CDATA[Diff between markdown documents]]></obe_comment>
 		<obe_help/>
 		<obe_class/>
-		<obe_script_id>ObjectExternal/MDDiff.js</obe_script_id>
+		<obe_script_id>scripts/ObjectExternal/MDDiff.js</obe_script_id>
 		<obe_icon>document</obe_icon>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
 	</data>
@@ -364,7 +472,7 @@
 		<obe_comment/>
 		<obe_help/>
 		<obe_class/>
-		<obe_script_id>ObjectExternal/MDViewer.js</obe_script_id>
+		<obe_script_id>scripts/ObjectExternal/MDViewer.js</obe_script_id>
 		<obe_icon>document</obe_icon>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
 	</data>
@@ -376,7 +484,7 @@
 		<obo_name>MDDocument</obo_name>
 		<obo_dbtable>md_document</obo_dbtable>
 		<obo_class/>
-		<obo_script_id>ObjectInternal/MDDocument.js</obo_script_id>
+		<obo_script_id>scripts/ObjectInternal/MDDocument.js</obo_script_id>
 		<obo_usets>1</obo_usets>
 		<obo_nosearch>0</obo_nosearch>
 		<obo_comment><![CDATA[Markdown document]]></obo_comment>
@@ -388,7 +496,7 @@
 		<obo_indexable>0</obo_indexable>
 		<obo_groupby>0</obo_groupby>
 		<obo_dfltref>MDDocumentHistoric;row_ref_id</obo_dfltref>
-		<obo_template_id.tpl_name>Base</obo_template_id.tpl_name>
+		<obo_template_id.tpl_name>MDDocument</obo_template_id.tpl_name>
 		<obo_cache>D</obo_cache>
 		<obo_copy>1</obo_copy>
 		<obo_export>1</obo_export>
@@ -401,10 +509,10 @@
 		<obo_list_edit>N;L;E</obo_list_edit>
 		<obo_useform>1</obo_useform>
 		<obo_title/>
-		<obo_icon>document</obo_icon>
+		<obo_icon>img/system/md_document</obo_icon>
 		<obo_refcount>0</obo_refcount>
 		<obo_tree>0</obo_tree>
-		<obo_viewmode>T</obo_viewmode>
+		<obo_viewmode>V</obo_viewmode>
 		<obo_historic>1</obo_historic>
 		<obo_printable>1</obo_printable>
 		<obo_followlink>1</obo_followlink>
@@ -418,8 +526,9 @@
 		<obo_btn_del>P</obo_btn_del>
 		<obo_btn_copy>P</obo_btn_copy>
 		<obo_btn_export>P</obo_btn_export>
-		<obo_btn_listadd>1</obo_btn_listadd>
-		<obo_btn_listedit>1</obo_btn_listedit>
+		<obo_btn_listadd>P</obo_btn_listadd>
+		<obo_btn_listedit>P</obo_btn_listedit>
+		<obo_btn_listupsert/>
 		<obo_btn_updall>P</obo_btn_updall>
 		<obo_btn_delall>P</obo_btn_delall>
 		<obo_btn_merge>P</obo_btn_merge>
@@ -428,12 +537,16 @@
 		<obo_btn_close>1</obo_btn_close>
 		<obo_tray>1</obo_tray>
 		<obo_dashboard>1</obo_dashboard>
+		<obo_prefix>doc</obo_prefix>
+		<obo_search_ts/>
+		<obo_minrows/>
+		<obo_maxrows/>
 	</data>
 	<data>
 		<obo_name>MDDocumentHistoric</obo_name>
 		<obo_dbtable>md_document_hist</obo_dbtable>
 		<obo_class/>
-		<obo_script_id>ObjectInternal/MDDocumentHistoric.js</obo_script_id>
+		<obo_script_id>scripts/ObjectInternal/MDDocumentHistoric.js</obo_script_id>
 		<obo_usets>1</obo_usets>
 		<obo_nosearch>0</obo_nosearch>
 		<obo_comment/>
@@ -461,8 +574,8 @@
 		<obo_icon>document</obo_icon>
 		<obo_refcount>0</obo_refcount>
 		<obo_tree>0</obo_tree>
-		<obo_viewmode>T</obo_viewmode>
-		<obo_historic>0</obo_historic>
+		<obo_viewmode>V</obo_viewmode>
+		<obo_historic/>
 		<obo_printable>1</obo_printable>
 		<obo_followlink>1</obo_followlink>
 		<obo_mergeable>0</obo_mergeable>
@@ -475,8 +588,9 @@
 		<obo_btn_del>P</obo_btn_del>
 		<obo_btn_copy>P</obo_btn_copy>
 		<obo_btn_export>P</obo_btn_export>
-		<obo_btn_listadd>1</obo_btn_listadd>
-		<obo_btn_listedit>1</obo_btn_listedit>
+		<obo_btn_listadd>P</obo_btn_listadd>
+		<obo_btn_listedit>P</obo_btn_listedit>
+		<obo_btn_listupsert/>
 		<obo_btn_updall>P</obo_btn_updall>
 		<obo_btn_delall>P</obo_btn_delall>
 		<obo_btn_merge>P</obo_btn_merge>
@@ -485,12 +599,16 @@
 		<obo_btn_close>1</obo_btn_close>
 		<obo_tray>1</obo_tray>
 		<obo_dashboard>1</obo_dashboard>
+		<obo_prefix/>
+		<obo_search_ts/>
+		<obo_minrows/>
+		<obo_maxrows/>
 	</data>
 	<data>
 		<obo_name>MDImage</obo_name>
 		<obo_dbtable>md_image</obo_dbtable>
 		<obo_class/>
-		<obo_script_id>ObjectInternal/MDImage.js</obo_script_id>
+		<obo_script_id>scripts/ObjectInternal/MDImage.js</obo_script_id>
 		<obo_usets>1</obo_usets>
 		<obo_nosearch>0</obo_nosearch>
 		<obo_comment><![CDATA[Markdown image]]></obo_comment>
@@ -502,7 +620,7 @@
 		<obo_indexable>0</obo_indexable>
 		<obo_groupby>0</obo_groupby>
 		<obo_dfltref/>
-		<obo_template_id.tpl_name>Base</obo_template_id.tpl_name>
+		<obo_template_id.tpl_name>MDImage</obo_template_id.tpl_name>
 		<obo_cache>D</obo_cache>
 		<obo_copy>0</obo_copy>
 		<obo_export>1</obo_export>
@@ -515,11 +633,11 @@
 		<obo_list_edit>N;L;E</obo_list_edit>
 		<obo_useform>1</obo_useform>
 		<obo_title/>
-		<obo_icon>image</obo_icon>
+		<obo_icon>img/system/md_image</obo_icon>
 		<obo_refcount>0</obo_refcount>
 		<obo_tree>0</obo_tree>
-		<obo_viewmode>T</obo_viewmode>
-		<obo_historic>0</obo_historic>
+		<obo_viewmode>V</obo_viewmode>
+		<obo_historic/>
 		<obo_printable>1</obo_printable>
 		<obo_followlink>1</obo_followlink>
 		<obo_mergeable>0</obo_mergeable>
@@ -532,8 +650,9 @@
 		<obo_btn_del>P</obo_btn_del>
 		<obo_btn_copy>P</obo_btn_copy>
 		<obo_btn_export>P</obo_btn_export>
-		<obo_btn_listadd>1</obo_btn_listadd>
-		<obo_btn_listedit>1</obo_btn_listedit>
+		<obo_btn_listadd>P</obo_btn_listadd>
+		<obo_btn_listedit>P</obo_btn_listedit>
+		<obo_btn_listupsert/>
 		<obo_btn_updall>P</obo_btn_updall>
 		<obo_btn_delall>P</obo_btn_delall>
 		<obo_btn_merge>P</obo_btn_merge>
@@ -542,6 +661,10 @@
 		<obo_btn_close>1</obo_btn_close>
 		<obo_tray>1</obo_tray>
 		<obo_dashboard>1</obo_dashboard>
+		<obo_prefix>img</obo_prefix>
+		<obo_search_ts/>
+		<obo_minrows/>
+		<obo_maxrows/>
 	</data>
 </object>
 <object>
@@ -556,9 +679,6 @@
 		<obf_dfault_order>1</obf_dfault_order>
 		<obf_input/>
 		<obf_ref_field_id.fld_name/>
-		<obf_field_id.fld_updatable>1</obf_field_id.fld_updatable>
-		<obf_field_id.fld_required>1</obf_field_id.fld_required>
-		<obf_field_id.fld_fonctid>1</obf_field_id.fld_fonctid>
 		<obf_ref_object_id.obo_name/>
 		<obf_cascad/>
 		<obf_card/>
@@ -567,21 +687,16 @@
 		<obf_copy/>
 		<obf_ref_order/>
 		<obf_fld_visible/>
-		<obf_field_id.fld_visible>3</obf_field_id.fld_visible>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
 		<obf_fld_research/>
-		<obf_field_id.fld_research>1</obf_field_id.fld_research>
 		<obf_fld_more/>
-		<obf_field_id.fld_more>0</obf_field_id.fld_more>
 		<obf_fld_listmore/>
-		<obf_field_id.fld_listmore>0</obf_field_id.fld_listmore>
 		<obf_fld_researchreq/>
-		<obf_field_id.fld_researchreq>0</obf_field_id.fld_researchreq>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>MDDocument-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -593,9 +708,6 @@
 		<obf_dfault_order/>
 		<obf_input/>
 		<obf_ref_field_id.fld_name/>
-		<obf_field_id.fld_updatable>0</obf_field_id.fld_updatable>
-		<obf_field_id.fld_required>0</obf_field_id.fld_required>
-		<obf_field_id.fld_fonctid>0</obf_field_id.fld_fonctid>
 		<obf_ref_object_id.obo_name/>
 		<obf_cascad/>
 		<obf_card/>
@@ -604,21 +716,16 @@
 		<obf_copy/>
 		<obf_ref_order/>
 		<obf_fld_visible/>
-		<obf_field_id.fld_visible>3</obf_field_id.fld_visible>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
 		<obf_fld_research/>
-		<obf_field_id.fld_research>0</obf_field_id.fld_research>
 		<obf_fld_more/>
-		<obf_field_id.fld_more>0</obf_field_id.fld_more>
 		<obf_fld_listmore/>
-		<obf_field_id.fld_listmore>0</obf_field_id.fld_listmore>
 		<obf_fld_researchreq/>
-		<obf_field_id.fld_researchreq>0</obf_field_id.fld_researchreq>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>MDDocument-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -630,9 +737,6 @@
 		<obf_dfault_order/>
 		<obf_input/>
 		<obf_ref_field_id.fld_name/>
-		<obf_field_id.fld_updatable>1</obf_field_id.fld_updatable>
-		<obf_field_id.fld_required>1</obf_field_id.fld_required>
-		<obf_field_id.fld_fonctid>0</obf_field_id.fld_fonctid>
 		<obf_ref_object_id.obo_name/>
 		<obf_cascad/>
 		<obf_card/>
@@ -641,21 +745,16 @@
 		<obf_copy/>
 		<obf_ref_order/>
 		<obf_fld_visible/>
-		<obf_field_id.fld_visible>3</obf_field_id.fld_visible>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
 		<obf_fld_research/>
-		<obf_field_id.fld_research>1</obf_field_id.fld_research>
 		<obf_fld_more/>
-		<obf_field_id.fld_more>0</obf_field_id.fld_more>
 		<obf_fld_listmore/>
-		<obf_field_id.fld_listmore>0</obf_field_id.fld_listmore>
 		<obf_fld_researchreq/>
-		<obf_field_id.fld_researchreq>0</obf_field_id.fld_researchreq>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>MDDocument-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -667,9 +766,6 @@
 		<obf_dfault_order/>
 		<obf_input/>
 		<obf_ref_field_id.fld_name/>
-		<obf_field_id.fld_updatable>1</obf_field_id.fld_updatable>
-		<obf_field_id.fld_required>0</obf_field_id.fld_required>
-		<obf_field_id.fld_fonctid>0</obf_field_id.fld_fonctid>
 		<obf_ref_object_id.obo_name/>
 		<obf_cascad/>
 		<obf_card/>
@@ -678,21 +774,16 @@
 		<obf_copy/>
 		<obf_ref_order/>
 		<obf_fld_visible/>
-		<obf_field_id.fld_visible>3</obf_field_id.fld_visible>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
 		<obf_fld_research/>
-		<obf_field_id.fld_research/>
 		<obf_fld_more/>
-		<obf_field_id.fld_more>1</obf_field_id.fld_more>
 		<obf_fld_listmore/>
-		<obf_field_id.fld_listmore>0</obf_field_id.fld_listmore>
 		<obf_fld_researchreq/>
-		<obf_field_id.fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>MDDocument-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -704,9 +795,6 @@
 		<obf_dfault_order/>
 		<obf_input/>
 		<obf_ref_field_id.fld_name/>
-		<obf_field_id.fld_updatable>1</obf_field_id.fld_updatable>
-		<obf_field_id.fld_required>0</obf_field_id.fld_required>
-		<obf_field_id.fld_fonctid>0</obf_field_id.fld_fonctid>
 		<obf_ref_object_id.obo_name/>
 		<obf_cascad/>
 		<obf_card/>
@@ -715,21 +803,16 @@
 		<obf_copy/>
 		<obf_ref_order/>
 		<obf_fld_visible/>
-		<obf_field_id.fld_visible>3</obf_field_id.fld_visible>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
 		<obf_fld_research/>
-		<obf_field_id.fld_research>1</obf_field_id.fld_research>
 		<obf_fld_more/>
-		<obf_field_id.fld_more>0</obf_field_id.fld_more>
 		<obf_fld_listmore/>
-		<obf_field_id.fld_listmore>0</obf_field_id.fld_listmore>
 		<obf_fld_researchreq/>
-		<obf_field_id.fld_researchreq>0</obf_field_id.fld_researchreq>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault><![CDATA[0]]></obf_field_id.fld_dfault>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>MDDocument-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -741,9 +824,6 @@
 		<obf_dfault_order/>
 		<obf_input/>
 		<obf_ref_field_id.fld_name/>
-		<obf_field_id.fld_updatable>1</obf_field_id.fld_updatable>
-		<obf_field_id.fld_required>1</obf_field_id.fld_required>
-		<obf_field_id.fld_fonctid>0</obf_field_id.fld_fonctid>
 		<obf_ref_object_id.obo_name>Module</obf_ref_object_id.obo_name>
 		<obf_cascad>C</obf_cascad>
 		<obf_card>0,n</obf_card>
@@ -752,21 +832,16 @@
 		<obf_copy>0</obf_copy>
 		<obf_ref_order/>
 		<obf_fld_visible/>
-		<obf_field_id.fld_visible>3</obf_field_id.fld_visible>
 		<obf_fld_required>0</obf_fld_required>
 		<obf_fld_updatable/>
 		<obf_fld_research/>
-		<obf_field_id.fld_research>1</obf_field_id.fld_research>
 		<obf_fld_more/>
-		<obf_field_id.fld_more>0</obf_field_id.fld_more>
 		<obf_fld_listmore/>
-		<obf_field_id.fld_listmore>0</obf_field_id.fld_listmore>
 		<obf_fld_researchreq/>
-		<obf_field_id.fld_researchreq>0</obf_field_id.fld_researchreq>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>MDDocument-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -778,9 +853,6 @@
 		<obf_dfault_order/>
 		<obf_input/>
 		<obf_ref_field_id.fld_name>row_module_id</obf_ref_field_id.fld_name>
-		<obf_field_id.fld_updatable>1</obf_field_id.fld_updatable>
-		<obf_field_id.fld_required>1</obf_field_id.fld_required>
-		<obf_field_id.fld_fonctid>1</obf_field_id.fld_fonctid>
 		<obf_ref_object_id.obo_name>Module</obf_ref_object_id.obo_name>
 		<obf_cascad/>
 		<obf_card/>
@@ -789,21 +861,16 @@
 		<obf_copy/>
 		<obf_ref_order/>
 		<obf_fld_visible/>
-		<obf_field_id.fld_visible>3</obf_field_id.fld_visible>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
 		<obf_fld_research/>
-		<obf_field_id.fld_research>1</obf_field_id.fld_research>
 		<obf_fld_more/>
-		<obf_field_id.fld_more>0</obf_field_id.fld_more>
 		<obf_fld_listmore/>
-		<obf_field_id.fld_listmore>0</obf_field_id.fld_listmore>
 		<obf_fld_researchreq/>
-		<obf_field_id.fld_researchreq>0</obf_field_id.fld_researchreq>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>MDDocument-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -815,9 +882,6 @@
 		<obf_dfault_order>1</obf_dfault_order>
 		<obf_input/>
 		<obf_ref_field_id.fld_name/>
-		<obf_field_id.fld_updatable>0</obf_field_id.fld_updatable>
-		<obf_field_id.fld_required>1</obf_field_id.fld_required>
-		<obf_field_id.fld_fonctid>1</obf_field_id.fld_fonctid>
 		<obf_ref_object_id.obo_name>MDDocument</obf_ref_object_id.obo_name>
 		<obf_cascad>C</obf_cascad>
 		<obf_card>0,n</obf_card>
@@ -826,17 +890,12 @@
 		<obf_copy>0</obf_copy>
 		<obf_ref_order>99990</obf_ref_order>
 		<obf_fld_visible/>
-		<obf_field_id.fld_visible>3</obf_field_id.fld_visible>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
 		<obf_fld_research/>
-		<obf_field_id.fld_research>1</obf_field_id.fld_research>
 		<obf_fld_more/>
-		<obf_field_id.fld_more>0</obf_field_id.fld_more>
 		<obf_fld_listmore/>
-		<obf_field_id.fld_listmore>0</obf_field_id.fld_listmore>
 		<obf_fld_researchreq/>
-		<obf_field_id.fld_researchreq>0</obf_field_id.fld_researchreq>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
 		<obf_area_id.ofa_name/>
@@ -852,9 +911,6 @@
 		<obf_dfault_order>-2</obf_dfault_order>
 		<obf_input/>
 		<obf_ref_field_id.fld_name/>
-		<obf_field_id.fld_updatable>1</obf_field_id.fld_updatable>
-		<obf_field_id.fld_required>1</obf_field_id.fld_required>
-		<obf_field_id.fld_fonctid>1</obf_field_id.fld_fonctid>
 		<obf_ref_object_id.obo_name/>
 		<obf_cascad/>
 		<obf_card/>
@@ -863,17 +919,12 @@
 		<obf_copy/>
 		<obf_ref_order/>
 		<obf_fld_visible/>
-		<obf_field_id.fld_visible>3</obf_field_id.fld_visible>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
 		<obf_fld_research/>
-		<obf_field_id.fld_research>1</obf_field_id.fld_research>
 		<obf_fld_more/>
-		<obf_field_id.fld_more>0</obf_field_id.fld_more>
 		<obf_fld_listmore/>
-		<obf_field_id.fld_listmore>0</obf_field_id.fld_listmore>
 		<obf_fld_researchreq/>
-		<obf_field_id.fld_researchreq>0</obf_field_id.fld_researchreq>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
 		<obf_area_id.ofa_name/>
@@ -889,9 +940,6 @@
 		<obf_dfault_order/>
 		<obf_input/>
 		<obf_ref_field_id.fld_name/>
-		<obf_field_id.fld_updatable>0</obf_field_id.fld_updatable>
-		<obf_field_id.fld_required>1</obf_field_id.fld_required>
-		<obf_field_id.fld_fonctid>1</obf_field_id.fld_fonctid>
 		<obf_ref_object_id.obo_name/>
 		<obf_cascad/>
 		<obf_card/>
@@ -900,17 +948,12 @@
 		<obf_copy/>
 		<obf_ref_order/>
 		<obf_fld_visible/>
-		<obf_field_id.fld_visible>3</obf_field_id.fld_visible>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
 		<obf_fld_research/>
-		<obf_field_id.fld_research>0</obf_field_id.fld_research>
 		<obf_fld_more/>
-		<obf_field_id.fld_more>0</obf_field_id.fld_more>
 		<obf_fld_listmore/>
-		<obf_field_id.fld_listmore>0</obf_field_id.fld_listmore>
 		<obf_fld_researchreq/>
-		<obf_field_id.fld_researchreq>0</obf_field_id.fld_researchreq>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
 		<obf_area_id.ofa_name/>
@@ -926,9 +969,6 @@
 		<obf_dfault_order/>
 		<obf_input/>
 		<obf_ref_field_id.fld_name/>
-		<obf_field_id.fld_updatable>0</obf_field_id.fld_updatable>
-		<obf_field_id.fld_required>1</obf_field_id.fld_required>
-		<obf_field_id.fld_fonctid>1</obf_field_id.fld_fonctid>
 		<obf_ref_object_id.obo_name/>
 		<obf_cascad/>
 		<obf_card/>
@@ -937,17 +977,12 @@
 		<obf_copy/>
 		<obf_ref_order/>
 		<obf_fld_visible/>
-		<obf_field_id.fld_visible>3</obf_field_id.fld_visible>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
 		<obf_fld_research/>
-		<obf_field_id.fld_research>0</obf_field_id.fld_research>
 		<obf_fld_more/>
-		<obf_field_id.fld_more>0</obf_field_id.fld_more>
 		<obf_fld_listmore/>
-		<obf_field_id.fld_listmore>0</obf_field_id.fld_listmore>
 		<obf_fld_researchreq/>
-		<obf_field_id.fld_researchreq>0</obf_field_id.fld_researchreq>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
 		<obf_area_id.ofa_name/>
@@ -963,9 +998,6 @@
 		<obf_dfault_order/>
 		<obf_input/>
 		<obf_ref_field_id.fld_name/>
-		<obf_field_id.fld_updatable>1</obf_field_id.fld_updatable>
-		<obf_field_id.fld_required>1</obf_field_id.fld_required>
-		<obf_field_id.fld_fonctid>1</obf_field_id.fld_fonctid>
 		<obf_ref_object_id.obo_name/>
 		<obf_cascad/>
 		<obf_card/>
@@ -974,17 +1006,12 @@
 		<obf_copy/>
 		<obf_ref_order/>
 		<obf_fld_visible/>
-		<obf_field_id.fld_visible>3</obf_field_id.fld_visible>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
 		<obf_fld_research/>
-		<obf_field_id.fld_research>1</obf_field_id.fld_research>
 		<obf_fld_more/>
-		<obf_field_id.fld_more>0</obf_field_id.fld_more>
 		<obf_fld_listmore/>
-		<obf_field_id.fld_listmore>0</obf_field_id.fld_listmore>
 		<obf_fld_researchreq/>
-		<obf_field_id.fld_researchreq>0</obf_field_id.fld_researchreq>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
 		<obf_area_id.ofa_name/>
@@ -1000,9 +1027,6 @@
 		<obf_dfault_order/>
 		<obf_input/>
 		<obf_ref_field_id.fld_name/>
-		<obf_field_id.fld_updatable>1</obf_field_id.fld_updatable>
-		<obf_field_id.fld_required>1</obf_field_id.fld_required>
-		<obf_field_id.fld_fonctid>0</obf_field_id.fld_fonctid>
 		<obf_ref_object_id.obo_name/>
 		<obf_cascad/>
 		<obf_card/>
@@ -1011,17 +1035,12 @@
 		<obf_copy/>
 		<obf_ref_order/>
 		<obf_fld_visible/>
-		<obf_field_id.fld_visible>3</obf_field_id.fld_visible>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
 		<obf_fld_research/>
-		<obf_field_id.fld_research>1</obf_field_id.fld_research>
 		<obf_fld_more/>
-		<obf_field_id.fld_more>0</obf_field_id.fld_more>
 		<obf_fld_listmore/>
-		<obf_field_id.fld_listmore>0</obf_field_id.fld_listmore>
 		<obf_fld_researchreq/>
-		<obf_field_id.fld_researchreq>0</obf_field_id.fld_researchreq>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
 		<obf_area_id.ofa_name/>
@@ -1037,9 +1056,6 @@
 		<obf_dfault_order/>
 		<obf_input/>
 		<obf_ref_field_id.fld_name/>
-		<obf_field_id.fld_updatable>1</obf_field_id.fld_updatable>
-		<obf_field_id.fld_required>0</obf_field_id.fld_required>
-		<obf_field_id.fld_fonctid>0</obf_field_id.fld_fonctid>
 		<obf_ref_object_id.obo_name/>
 		<obf_cascad/>
 		<obf_card/>
@@ -1048,17 +1064,12 @@
 		<obf_copy/>
 		<obf_ref_order/>
 		<obf_fld_visible/>
-		<obf_field_id.fld_visible>3</obf_field_id.fld_visible>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
 		<obf_fld_research/>
-		<obf_field_id.fld_research/>
 		<obf_fld_more/>
-		<obf_field_id.fld_more>1</obf_field_id.fld_more>
 		<obf_fld_listmore/>
-		<obf_field_id.fld_listmore>0</obf_field_id.fld_listmore>
 		<obf_fld_researchreq/>
-		<obf_field_id.fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
 		<obf_area_id.ofa_name/>
@@ -1074,9 +1085,6 @@
 		<obf_dfault_order>1</obf_dfault_order>
 		<obf_input/>
 		<obf_ref_field_id.fld_name/>
-		<obf_field_id.fld_updatable>1</obf_field_id.fld_updatable>
-		<obf_field_id.fld_required>1</obf_field_id.fld_required>
-		<obf_field_id.fld_fonctid>1</obf_field_id.fld_fonctid>
 		<obf_ref_object_id.obo_name/>
 		<obf_cascad/>
 		<obf_card/>
@@ -1085,21 +1093,16 @@
 		<obf_copy/>
 		<obf_ref_order/>
 		<obf_fld_visible/>
-		<obf_field_id.fld_visible>3</obf_field_id.fld_visible>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
 		<obf_fld_research/>
-		<obf_field_id.fld_research>1</obf_field_id.fld_research>
 		<obf_fld_more/>
-		<obf_field_id.fld_more>0</obf_field_id.fld_more>
 		<obf_fld_listmore/>
-		<obf_field_id.fld_listmore>0</obf_field_id.fld_listmore>
 		<obf_fld_researchreq/>
-		<obf_field_id.fld_researchreq>0</obf_field_id.fld_researchreq>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>MDImage-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -1111,9 +1114,6 @@
 		<obf_dfault_order/>
 		<obf_input/>
 		<obf_ref_field_id.fld_name/>
-		<obf_field_id.fld_updatable>1</obf_field_id.fld_updatable>
-		<obf_field_id.fld_required>1</obf_field_id.fld_required>
-		<obf_field_id.fld_fonctid>0</obf_field_id.fld_fonctid>
 		<obf_ref_object_id.obo_name/>
 		<obf_cascad/>
 		<obf_card/>
@@ -1122,21 +1122,16 @@
 		<obf_copy/>
 		<obf_ref_order/>
 		<obf_fld_visible/>
-		<obf_field_id.fld_visible>3</obf_field_id.fld_visible>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
 		<obf_fld_research/>
-		<obf_field_id.fld_research/>
 		<obf_fld_more/>
-		<obf_field_id.fld_more>0</obf_field_id.fld_more>
 		<obf_fld_listmore/>
-		<obf_field_id.fld_listmore>0</obf_field_id.fld_listmore>
 		<obf_fld_researchreq/>
-		<obf_field_id.fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>MDImage-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -1148,9 +1143,6 @@
 		<obf_dfault_order/>
 		<obf_input/>
 		<obf_ref_field_id.fld_name/>
-		<obf_field_id.fld_updatable>1</obf_field_id.fld_updatable>
-		<obf_field_id.fld_required>1</obf_field_id.fld_required>
-		<obf_field_id.fld_fonctid>0</obf_field_id.fld_fonctid>
 		<obf_ref_object_id.obo_name>Module</obf_ref_object_id.obo_name>
 		<obf_cascad>C</obf_cascad>
 		<obf_card>0,n</obf_card>
@@ -1159,21 +1151,16 @@
 		<obf_copy>0</obf_copy>
 		<obf_ref_order/>
 		<obf_fld_visible/>
-		<obf_field_id.fld_visible>3</obf_field_id.fld_visible>
 		<obf_fld_required>0</obf_fld_required>
 		<obf_fld_updatable/>
 		<obf_fld_research/>
-		<obf_field_id.fld_research>1</obf_field_id.fld_research>
 		<obf_fld_more/>
-		<obf_field_id.fld_more>0</obf_field_id.fld_more>
 		<obf_fld_listmore/>
-		<obf_field_id.fld_listmore>0</obf_field_id.fld_listmore>
 		<obf_fld_researchreq/>
-		<obf_field_id.fld_researchreq>0</obf_field_id.fld_researchreq>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>MDImage-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -1185,9 +1172,6 @@
 		<obf_dfault_order/>
 		<obf_input/>
 		<obf_ref_field_id.fld_name>row_module_id</obf_ref_field_id.fld_name>
-		<obf_field_id.fld_updatable>1</obf_field_id.fld_updatable>
-		<obf_field_id.fld_required>1</obf_field_id.fld_required>
-		<obf_field_id.fld_fonctid>1</obf_field_id.fld_fonctid>
 		<obf_ref_object_id.obo_name>Module</obf_ref_object_id.obo_name>
 		<obf_cascad/>
 		<obf_card/>
@@ -1196,21 +1180,16 @@
 		<obf_copy/>
 		<obf_ref_order/>
 		<obf_fld_visible/>
-		<obf_field_id.fld_visible>3</obf_field_id.fld_visible>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
 		<obf_fld_research/>
-		<obf_field_id.fld_research>1</obf_field_id.fld_research>
 		<obf_fld_more/>
-		<obf_field_id.fld_more>0</obf_field_id.fld_more>
 		<obf_fld_listmore/>
-		<obf_field_id.fld_listmore>0</obf_field_id.fld_listmore>
 		<obf_fld_researchreq/>
-		<obf_field_id.fld_researchreq>0</obf_field_id.fld_researchreq>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>MDImage-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
 	</data>
 </object>
@@ -1235,6 +1214,8 @@
 		<obf_copy>0</obf_copy>
 		<obf_associate/>
 		<obf_inline>0</obf_inline>
+		<obf_rendering/>
+		<obf_treedepth/>
 		<obf_area_id.ofa_name/>
 		<obf_area_id.ofa_position/>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
@@ -1257,8 +1238,10 @@
 		<obf_copy>0</obf_copy>
 		<obf_associate>0</obf_associate>
 		<obf_inline>0</obf_inline>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_rendering/>
+		<obf_treedepth/>
+		<obf_area_id.ofa_name>MDDocument-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -1279,8 +1262,10 @@
 		<obf_copy>0</obf_copy>
 		<obf_associate>0</obf_associate>
 		<obf_inline>0</obf_inline>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_rendering/>
+		<obf_treedepth/>
+		<obf_area_id.ofa_name>MDImage-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
 	</data>
 </object>
@@ -1304,6 +1289,7 @@
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
 		<act_exec>BCK</act_exec>
 		<act_count/>
+		<act_order/>
 	</data>
 	<data>
 		<act_name>MDDocEdit</act_name>
@@ -1322,6 +1308,7 @@
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
 		<act_exec>FRT</act_exec>
 		<act_count/>
+		<act_order/>
 	</data>
 	<data>
 		<act_name>MDDocView</act_name>
@@ -1340,6 +1327,7 @@
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
 		<act_exec>FRT</act_exec>
 		<act_count/>
+		<act_order/>
 	</data>
 </object>
 <object>
@@ -1347,6 +1335,7 @@
 	<action>upsert</action>
 	<data>
 		<fct_name>MDDiff-E</fct_name>
+		<fct_object_id.obj_type>E</fct_object_id.obj_type>
 		<fct_object_id.obj_name>MDDiff</fct_object_id.obj_name>
 		<fct_function>L</fct_function>
 		<fct_action_id.act_name/>
@@ -1355,6 +1344,7 @@
 	</data>
 	<data>
 		<fct_name>MDDocDiff-A</fct_name>
+		<fct_object_id.obj_type>O</fct_object_id.obj_type>
 		<fct_object_id.obj_name>MDDocumentHistoric</fct_object_id.obj_name>
 		<fct_function>A</fct_function>
 		<fct_action_id.act_name>MDDocDiff</fct_action_id.act_name>
@@ -1363,6 +1353,7 @@
 	</data>
 	<data>
 		<fct_name>MDDocEdit-A</fct_name>
+		<fct_object_id.obj_type>O</fct_object_id.obj_type>
 		<fct_object_id.obj_name>MDDocument</fct_object_id.obj_name>
 		<fct_function>A</fct_function>
 		<fct_action_id.act_name>MDDocEdit</fct_action_id.act_name>
@@ -1371,6 +1362,7 @@
 	</data>
 	<data>
 		<fct_name>MDDocument-CUD</fct_name>
+		<fct_object_id.obj_type>O</fct_object_id.obj_type>
 		<fct_object_id.obj_name>MDDocument</fct_object_id.obj_name>
 		<fct_function>CMS</fct_function>
 		<fct_action_id.act_name/>
@@ -1379,6 +1371,7 @@
 	</data>
 	<data>
 		<fct_name>MDDocument-H</fct_name>
+		<fct_object_id.obj_type>O</fct_object_id.obj_type>
 		<fct_object_id.obj_name>MDDocumentHistoric</fct_object_id.obj_name>
 		<fct_function>S</fct_function>
 		<fct_action_id.act_name/>
@@ -1387,6 +1380,7 @@
 	</data>
 	<data>
 		<fct_name>MDDocument-R</fct_name>
+		<fct_object_id.obj_type>O</fct_object_id.obj_type>
 		<fct_object_id.obj_name>MDDocument</fct_object_id.obj_name>
 		<fct_function>L</fct_function>
 		<fct_action_id.act_name/>
@@ -1395,6 +1389,7 @@
 	</data>
 	<data>
 		<fct_name>MDDocView-A</fct_name>
+		<fct_object_id.obj_type>O</fct_object_id.obj_type>
 		<fct_object_id.obj_name>MDDocument</fct_object_id.obj_name>
 		<fct_function>A</fct_function>
 		<fct_action_id.act_name>MDDocView</fct_action_id.act_name>
@@ -1403,6 +1398,7 @@
 	</data>
 	<data>
 		<fct_name>MDDomain-D</fct_name>
+		<fct_object_id.obj_type>D</fct_object_id.obj_type>
 		<fct_object_id.obj_name>MDDomain</fct_object_id.obj_name>
 		<fct_function>L</fct_function>
 		<fct_action_id.act_name/>
@@ -1411,6 +1407,7 @@
 	</data>
 	<data>
 		<fct_name>MDImage-CUD</fct_name>
+		<fct_object_id.obj_type>O</fct_object_id.obj_type>
 		<fct_object_id.obj_name>MDImage</fct_object_id.obj_name>
 		<fct_function>CMS</fct_function>
 		<fct_action_id.act_name/>
@@ -1419,6 +1416,7 @@
 	</data>
 	<data>
 		<fct_name>MDImage-R</fct_name>
+		<fct_object_id.obj_type>O</fct_object_id.obj_type>
 		<fct_object_id.obj_name>MDImage</fct_object_id.obj_name>
 		<fct_function>L</fct_function>
 		<fct_action_id.act_name/>
@@ -1427,6 +1425,7 @@
 	</data>
 	<data>
 		<fct_name>MDViewer-E</fct_name>
+		<fct_object_id.obj_type>E</fct_object_id.obj_type>
 		<fct_object_id.obj_name>MDViewer</fct_object_id.obj_name>
 		<fct_function>L</fct_function>
 		<fct_action_id.act_name/>
@@ -1440,9 +1439,9 @@
 	<data>
 		<grt_group_id.grp_name>MD_ADMIN</grt_group_id.grp_name>
 		<grt_function_id.fct_name>MDDiff-E</grt_function_id.fct_name>
-		<fct_object_id.obj_type>E</fct_object_id.obj_type>
-		<fct_object_id.obj_name>MDDiff</fct_object_id.obj_name>
-		<fct_action_id.act_name/>
+		<grt_function_id.fct_object_id.obj_type>E</grt_function_id.fct_object_id.obj_type>
+		<grt_function_id.fct_object_id.obj_name>MDDiff</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_action_id.act_name/>
 		<grt_function_id.fct_function>L</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
@@ -1450,9 +1449,9 @@
 	<data>
 		<grt_group_id.grp_name>MD_ADMIN</grt_group_id.grp_name>
 		<grt_function_id.fct_name>MDDocEdit-A</grt_function_id.fct_name>
-		<fct_object_id.obj_type>O</fct_object_id.obj_type>
-		<fct_object_id.obj_name>MDDocument</fct_object_id.obj_name>
-		<fct_action_id.act_name>MDDocEdit</fct_action_id.act_name>
+		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
+		<grt_function_id.fct_object_id.obj_name>MDDocument</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_action_id.act_name>MDDocEdit</grt_function_id.fct_action_id.act_name>
 		<grt_function_id.fct_function>A</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
@@ -1460,9 +1459,9 @@
 	<data>
 		<grt_group_id.grp_name>MD_ADMIN</grt_group_id.grp_name>
 		<grt_function_id.fct_name>MDDocument-CUD</grt_function_id.fct_name>
-		<fct_object_id.obj_type>O</fct_object_id.obj_type>
-		<fct_object_id.obj_name>MDDocument</fct_object_id.obj_name>
-		<fct_action_id.act_name/>
+		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
+		<grt_function_id.fct_object_id.obj_name>MDDocument</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_action_id.act_name/>
 		<grt_function_id.fct_function>CMS</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
@@ -1470,9 +1469,9 @@
 	<data>
 		<grt_group_id.grp_name>MD_ADMIN</grt_group_id.grp_name>
 		<grt_function_id.fct_name>MDDocView-A</grt_function_id.fct_name>
-		<fct_object_id.obj_type>O</fct_object_id.obj_type>
-		<fct_object_id.obj_name>MDDocument</fct_object_id.obj_name>
-		<fct_action_id.act_name>MDDocView</fct_action_id.act_name>
+		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
+		<grt_function_id.fct_object_id.obj_name>MDDocument</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_action_id.act_name>MDDocView</grt_function_id.fct_action_id.act_name>
 		<grt_function_id.fct_function>A</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
@@ -1480,9 +1479,9 @@
 	<data>
 		<grt_group_id.grp_name>MD_ADMIN</grt_group_id.grp_name>
 		<grt_function_id.fct_name>MDDocDiff-A</grt_function_id.fct_name>
-		<fct_object_id.obj_type>O</fct_object_id.obj_type>
-		<fct_object_id.obj_name>MDDocumentHistoric</fct_object_id.obj_name>
-		<fct_action_id.act_name>MDDocDiff</fct_action_id.act_name>
+		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
+		<grt_function_id.fct_object_id.obj_name>MDDocumentHistoric</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_action_id.act_name>MDDocDiff</grt_function_id.fct_action_id.act_name>
 		<grt_function_id.fct_function>A</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
@@ -1490,9 +1489,9 @@
 	<data>
 		<grt_group_id.grp_name>MD_ADMIN</grt_group_id.grp_name>
 		<grt_function_id.fct_name>MDDocument-H</grt_function_id.fct_name>
-		<fct_object_id.obj_type>O</fct_object_id.obj_type>
-		<fct_object_id.obj_name>MDDocumentHistoric</fct_object_id.obj_name>
-		<fct_action_id.act_name/>
+		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
+		<grt_function_id.fct_object_id.obj_name>MDDocumentHistoric</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_action_id.act_name/>
 		<grt_function_id.fct_function>S</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
@@ -1500,9 +1499,9 @@
 	<data>
 		<grt_group_id.grp_name>MD_ADMIN</grt_group_id.grp_name>
 		<grt_function_id.fct_name>MDDomain-D</grt_function_id.fct_name>
-		<fct_object_id.obj_type>D</fct_object_id.obj_type>
-		<fct_object_id.obj_name>MDDomain</fct_object_id.obj_name>
-		<fct_action_id.act_name/>
+		<grt_function_id.fct_object_id.obj_type>D</grt_function_id.fct_object_id.obj_type>
+		<grt_function_id.fct_object_id.obj_name>MDDomain</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_action_id.act_name/>
 		<grt_function_id.fct_function>L</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
@@ -1510,9 +1509,9 @@
 	<data>
 		<grt_group_id.grp_name>MD_ADMIN</grt_group_id.grp_name>
 		<grt_function_id.fct_name>MDImage-CUD</grt_function_id.fct_name>
-		<fct_object_id.obj_type>O</fct_object_id.obj_type>
-		<fct_object_id.obj_name>MDImage</fct_object_id.obj_name>
-		<fct_action_id.act_name/>
+		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
+		<grt_function_id.fct_object_id.obj_name>MDImage</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_action_id.act_name/>
 		<grt_function_id.fct_function>CMS</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
@@ -1520,9 +1519,9 @@
 	<data>
 		<grt_group_id.grp_name>MD_ADMIN</grt_group_id.grp_name>
 		<grt_function_id.fct_name>MDViewer-E</grt_function_id.fct_name>
-		<fct_object_id.obj_type>E</fct_object_id.obj_type>
-		<fct_object_id.obj_name>MDViewer</fct_object_id.obj_name>
-		<fct_action_id.act_name/>
+		<grt_function_id.fct_object_id.obj_type>E</grt_function_id.fct_object_id.obj_type>
+		<grt_function_id.fct_object_id.obj_name>MDViewer</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_action_id.act_name/>
 		<grt_function_id.fct_function>L</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
@@ -1530,9 +1529,9 @@
 	<data>
 		<grt_group_id.grp_name>MD_READER</grt_group_id.grp_name>
 		<grt_function_id.fct_name>MDDocument-R</grt_function_id.fct_name>
-		<fct_object_id.obj_type>O</fct_object_id.obj_type>
-		<fct_object_id.obj_name>MDDocument</fct_object_id.obj_name>
-		<fct_action_id.act_name/>
+		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
+		<grt_function_id.fct_object_id.obj_name>MDDocument</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_action_id.act_name/>
 		<grt_function_id.fct_function>L</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
@@ -1540,9 +1539,9 @@
 	<data>
 		<grt_group_id.grp_name>MD_READER</grt_group_id.grp_name>
 		<grt_function_id.fct_name>MDDocView-A</grt_function_id.fct_name>
-		<fct_object_id.obj_type>O</fct_object_id.obj_type>
-		<fct_object_id.obj_name>MDDocument</fct_object_id.obj_name>
-		<fct_action_id.act_name>MDDocView</fct_action_id.act_name>
+		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
+		<grt_function_id.fct_object_id.obj_name>MDDocument</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_action_id.act_name>MDDocView</grt_function_id.fct_action_id.act_name>
 		<grt_function_id.fct_function>A</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
@@ -1550,9 +1549,9 @@
 	<data>
 		<grt_group_id.grp_name>MD_READER</grt_group_id.grp_name>
 		<grt_function_id.fct_name>MDImage-R</grt_function_id.fct_name>
-		<fct_object_id.obj_type>O</fct_object_id.obj_type>
-		<fct_object_id.obj_name>MDImage</fct_object_id.obj_name>
-		<fct_action_id.act_name/>
+		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
+		<grt_function_id.fct_object_id.obj_name>MDImage</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_action_id.act_name/>
 		<grt_function_id.fct_function>L</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
@@ -1560,9 +1559,9 @@
 	<data>
 		<grt_group_id.grp_name>MD_READER</grt_group_id.grp_name>
 		<grt_function_id.fct_name>MDViewer-E</grt_function_id.fct_name>
-		<fct_object_id.obj_type>E</fct_object_id.obj_type>
-		<fct_object_id.obj_name>MDViewer</fct_object_id.obj_name>
-		<fct_action_id.act_name/>
+		<grt_function_id.fct_object_id.obj_type>E</grt_function_id.fct_object_id.obj_type>
+		<grt_function_id.fct_object_id.obj_name>MDViewer</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_action_id.act_name/>
 		<grt_function_id.fct_function>L</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
@@ -1570,9 +1569,9 @@
 	<data>
 		<grt_group_id.grp_name>PUBLIC</grt_group_id.grp_name>
 		<grt_function_id.fct_name>MDDocument-R</grt_function_id.fct_name>
-		<fct_object_id.obj_type>O</fct_object_id.obj_type>
-		<fct_object_id.obj_name>MDDocument</fct_object_id.obj_name>
-		<fct_action_id.act_name/>
+		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
+		<grt_function_id.fct_object_id.obj_name>MDDocument</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_action_id.act_name/>
 		<grt_function_id.fct_function>L</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
@@ -1580,9 +1579,9 @@
 	<data>
 		<grt_group_id.grp_name>PUBLIC</grt_group_id.grp_name>
 		<grt_function_id.fct_name>MDImage-R</grt_function_id.fct_name>
-		<fct_object_id.obj_type>O</fct_object_id.obj_type>
-		<fct_object_id.obj_name>MDImage</fct_object_id.obj_name>
-		<fct_action_id.act_name/>
+		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
+		<grt_function_id.fct_object_id.obj_name>MDImage</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_action_id.act_name/>
 		<grt_function_id.fct_function>L</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
@@ -1590,9 +1589,9 @@
 	<data>
 		<grt_group_id.grp_name>PUBLIC</grt_group_id.grp_name>
 		<grt_function_id.fct_name>MDViewer-E</grt_function_id.fct_name>
-		<fct_object_id.obj_type>E</fct_object_id.obj_type>
-		<fct_object_id.obj_name>MDViewer</fct_object_id.obj_name>
-		<fct_action_id.act_name/>
+		<grt_function_id.fct_object_id.obj_type>E</grt_function_id.fct_object_id.obj_type>
+		<grt_function_id.fct_object_id.obj_name>MDViewer</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_action_id.act_name/>
 		<grt_function_id.fct_function>L</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
@@ -1681,7 +1680,9 @@
 		<tsl_simplehelp/>
 		<tsl_short_value/>
 		<tsl_placeholder/>
+		<tsl_listhelp/>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
+		<tsl_tooltip/>
 	</data>
 	<data>
 		<tsl_typeField>F</tsl_typeField>
@@ -1691,7 +1692,9 @@
 		<tsl_simplehelp/>
 		<tsl_short_value/>
 		<tsl_placeholder/>
+		<tsl_listhelp/>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
+		<tsl_tooltip/>
 	</data>
 	<data>
 		<tsl_typeField>F</tsl_typeField>
@@ -1701,7 +1704,9 @@
 		<tsl_simplehelp/>
 		<tsl_short_value/>
 		<tsl_placeholder/>
+		<tsl_listhelp/>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
+		<tsl_tooltip/>
 	</data>
 	<data>
 		<tsl_typeField>F</tsl_typeField>
@@ -1711,7 +1716,9 @@
 		<tsl_simplehelp/>
 		<tsl_short_value/>
 		<tsl_placeholder/>
+		<tsl_listhelp/>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
+		<tsl_tooltip/>
 	</data>
 	<data>
 		<tsl_typeField>F</tsl_typeField>
@@ -1721,7 +1728,9 @@
 		<tsl_simplehelp/>
 		<tsl_short_value/>
 		<tsl_placeholder/>
+		<tsl_listhelp/>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
+		<tsl_tooltip/>
 	</data>
 	<data>
 		<tsl_typeField>F</tsl_typeField>
@@ -1731,7 +1740,9 @@
 		<tsl_simplehelp/>
 		<tsl_short_value/>
 		<tsl_placeholder/>
+		<tsl_listhelp/>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
+		<tsl_tooltip/>
 	</data>
 	<data>
 		<tsl_typeField>F</tsl_typeField>
@@ -1741,7 +1752,9 @@
 		<tsl_simplehelp/>
 		<tsl_short_value/>
 		<tsl_placeholder/>
+		<tsl_listhelp/>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
+		<tsl_tooltip/>
 	</data>
 	<data>
 		<tsl_typeField>F</tsl_typeField>
@@ -1751,7 +1764,9 @@
 		<tsl_simplehelp/>
 		<tsl_short_value/>
 		<tsl_placeholder/>
+		<tsl_listhelp/>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
+		<tsl_tooltip/>
 	</data>
 	<data>
 		<tsl_typeField>F</tsl_typeField>
@@ -1761,7 +1776,9 @@
 		<tsl_simplehelp/>
 		<tsl_short_value/>
 		<tsl_placeholder/>
+		<tsl_listhelp/>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
+		<tsl_tooltip/>
 	</data>
 	<data>
 		<tsl_typeField>F</tsl_typeField>
@@ -1771,7 +1788,9 @@
 		<tsl_simplehelp/>
 		<tsl_short_value/>
 		<tsl_placeholder/>
+		<tsl_listhelp/>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
+		<tsl_tooltip/>
 	</data>
 	<data>
 		<tsl_typeField>F</tsl_typeField>
@@ -1781,7 +1800,9 @@
 		<tsl_simplehelp/>
 		<tsl_short_value/>
 		<tsl_placeholder/>
+		<tsl_listhelp/>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
+		<tsl_tooltip/>
 	</data>
 	<data>
 		<tsl_typeField>F</tsl_typeField>
@@ -1791,7 +1812,9 @@
 		<tsl_simplehelp/>
 		<tsl_short_value/>
 		<tsl_placeholder/>
+		<tsl_listhelp/>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
+		<tsl_tooltip/>
 	</data>
 	<data>
 		<tsl_typeField>F</tsl_typeField>
@@ -1801,7 +1824,9 @@
 		<tsl_simplehelp/>
 		<tsl_short_value/>
 		<tsl_placeholder/>
+		<tsl_listhelp/>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
+		<tsl_tooltip/>
 	</data>
 	<data>
 		<tsl_typeField>F</tsl_typeField>
@@ -1811,6 +1836,40 @@
 		<tsl_simplehelp/>
 		<tsl_short_value/>
 		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
+		<tsl_tooltip/>
+	</data>
+</object>
+<object>
+	<name>TranslateFieldArea</name>
+	<action>upsert</action>
+	<data>
+		<tsl_typeFieldArea>Z</tsl_typeFieldArea>
+		<tsl_id.ofa_name>MDDocument-1</tsl_id.ofa_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Document</tsl_value>
+		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeFieldArea>Z</tsl_typeFieldArea>
+		<tsl_id.ofa_name>MDImage-1</tsl_id.ofa_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Image</tsl_value>
+		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeFieldArea>Z</tsl_typeFieldArea>
+		<tsl_id.ofa_name>MDDocument-1</tsl_id.ofa_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Document</tsl_value>
+		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeFieldArea>Z</tsl_typeFieldArea>
+		<tsl_id.ofa_name>MDImage-1</tsl_id.ofa_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Image</tsl_value>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
 	</data>
 </object>
@@ -1929,7 +1988,7 @@
 		<mdDocCode>MARKDOWN</mdDocCode>
 		<mdDocURL><![CDATA[/ext/MDViewer?doc=MARKDOWN]]></mdDocURL>
 		<mdDocTitle>Markdown documentation</mdDocTitle>
-		<mdDocFile>MDDocument/MARKDOWN.md</mdDocFile>
+		<mdDocFile>docs/MDDocument/MARKDOWN.md</mdDocFile>
 		<mdDocPublished>1</mdDocPublished>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
 	</data>
