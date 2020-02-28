@@ -74,6 +74,6 @@ Diff between markdown documents
 `MDViewer` external object definition
 -------------------------------------
 
-
+Markdown documentation viewer
 
 

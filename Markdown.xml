@@ -469,7 +469,7 @@
 		<obe_name>MDViewer</obe_name>
 		<obe_type>E</obe_type>
 		<obe_url/>
-		<obe_comment/>
+		<obe_comment><![CDATA[Markdown documentation viewer]]></obe_comment>
 		<obe_help/>
 		<obe_class/>
 		<obe_script_id>scripts/ObjectExternal/MDViewer.js</obe_script_id>
