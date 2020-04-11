@@ -5,7 +5,7 @@ MDViewer.getMDImage = function(code) {
 	var rows = img.search();
 	if (rows.size() == 1) {
 		var row = rows.get(0);
-		img.setValues(row, false);
+		img.setValues(row);
 		return img.getField("mdImgFile").getDocument(this.getGrant());
 	} else {
 		console.error("No markdown image for code " + code);
@@ -20,7 +20,7 @@ MDViewer.getModelImage = function(name) {
 	var rows = mdl.search();
 	if (rows.size() == 1) {
 		var row = rows.get(0);
-		mdl.setValues(row, false);
+		mdl.setValues(row);
 		return mdl.getField("mod_image").getDocument(this.getGrant());
 	} else {
 		console.error("No model image for name " + name);
@@ -150,6 +150,7 @@ MDViewer.display = function(params) {
 	var action = params.getBooleanParameter("action", false);
 	this.setDecoration(action);
 
+	this.addExtraCSS(HTMLTool.docCSS());	
 	this.addExtraCSS(HTMLTool.highlightCSS());	
 	this.addExtraJS(HTMLTool.highlightJS());	
 	
@@ -166,7 +167,7 @@ MDViewer.display = function(params) {
 		var rows = doc.search();
 		if (rows.size() == 1) {
 			var row = rows.get(0);
-			doc.setValues(row, false);
+			doc.setValues(row);
 			title = doc.getFieldValue("mdDocTitle");
 			var d = doc.getField("mdDocFile");
 			if (!d.isEmpty())
@@ -209,9 +210,9 @@ MDViewer.display = function(params) {
 		md = MDViewer.substAll.call(this, params.getBaseLocation(), md);
 	}
 
-	if (action) {
-		this.appendCSSInclude(HTMLTool.docCSS());
-		this.setHTML("<div class=\"doc\">" + MarkdownTool.toHTML(md) + "</div>");
-	} else
-		return MarkdownTool.toHTMLPage(title, md);
+	md = MarkdownTool.toHTMLPage(title, md);
+	if (action)
+		this.setHTML(md);
+	else
+		return md;
 };
