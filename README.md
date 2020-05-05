@@ -11,7 +11,38 @@
 `Markdown` module definition
 ============================
 
-Markdown documentation module
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=simplicite-modules-Markdown&metric=alert_status)](https://sonarcloud.io/dashboard?id=simplicite-modules-Markdown)
+
+### Introduction
+
+Markdown documentation module.
+
+### Import
+
+To import this module:
+
+- Create a module named `Markdown`
+- Set the settings as:
+
+```json
+{
+	"type": "git",
+	"origin": {
+		"uri": "https://github.com/simplicitesoftware/module-markdown.git"
+	}
+}
+```
+
+- Click on the _Import module_ button
+
+### Quality
+
+This module can be analysed by the **SonarQube** analysis tool
+using this command:
+
+```bash
+mvn verify sonar:sonar
+```
 
 `MDDocument` business object definition
 ---------------------------------------
