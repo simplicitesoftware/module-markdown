@@ -213,7 +213,7 @@ MDViewer.display = function(params) {
 	if (action) { // Embedded
 		var id = this.getName() + "_" + code;
 		this.setHTML("<div id=\"" + id + "\">" + MarkdownTool.toHTML(md) + "</div>");
-		return this.javascript("document.getElementById(\"" + id + "\").querySelectorAll('pre code').forEach(function(block) { hljs.highlightBlock(block); });");
+		return this.javascript("$(\"#" + id + " pre code\").each(function() { hljs.highlightBlock(this); });");
 	} else { // Fullpage
 		return MarkdownTool.toHTMLPage(title, md);
 	}
