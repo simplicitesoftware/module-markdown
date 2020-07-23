@@ -394,16 +394,14 @@ mvn verify sonar:sonar
 	<action>upsert</action>
 	<data>
 		<tpl_name>MDDocument</tpl_name>
-		<tpl_ui><![CDATA[<div class="area" data-area="1"></div>
-]]></tpl_ui>
+		<tpl_ui><![CDATA[<div class="area" data-area="1"></div>]]></tpl_ui>
 		<tpl_min/>
 		<tpl_image/>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
 	</data>
 	<data>
 		<tpl_name>MDImage</tpl_name>
-		<tpl_ui><![CDATA[<div class="area" data-area="1"></div>
-]]></tpl_ui>
+		<tpl_ui><![CDATA[<div class="area" data-area="1"></div>]]></tpl_ui>
 		<tpl_min/>
 		<tpl_image/>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
@@ -436,8 +434,7 @@ mvn verify sonar:sonar
       <div class="field" data-field="mdDocPublished"></div>
     </div>
   </div>
-</div>
-]]></ofa_ui>
+</div>]]></ofa_ui>
 		<ofa_icon/>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
 	</data>
@@ -454,8 +451,7 @@ mvn verify sonar:sonar
   <div class="col-sm-8">
     <div class="field" data-field="mdImgFile"></div>
   </div>
-</div>
-]]></ofa_ui>
+</div>]]></ofa_ui>
 		<ofa_icon/>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
 	</data>
@@ -587,7 +583,7 @@ mvn verify sonar:sonar
 		<obo_copy>0</obo_copy>
 		<obo_export>1</obo_export>
 		<obo_pagine>1</obo_pagine>
-		<obo_srh_predef>0</obo_srh_predef>
+		<obo_srh_predef>1</obo_srh_predef>
 		<obo_selrow>1</obo_selrow>
 		<obo_updall>0</obo_updall>
 		<obo_delall>1</obo_delall>

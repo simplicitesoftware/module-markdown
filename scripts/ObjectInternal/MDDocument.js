@@ -10,3 +10,7 @@ MDDocument.getMappedFilePath = function(f) {
 	if (f.getName() == "mdDocFile")
 		return "docs/" + this.getName() + "/" + this.getFieldValue("mdDocCode") + ".md";
 };
+
+MDDocument.getMappedExportPath = function(row) {
+	return this.getFieldValue("mdDocCode", row);	
+};
