@@ -5,7 +5,7 @@
 	<action>upsert</action>
 	<data>
 		<mdl_name>Markdown</mdl_name>
-		<mdl_version>4.0</mdl_version>
+		<mdl_version>1.0</mdl_version>
 		<mdl_prefix>md</mdl_prefix>
 		<mdl_url><![CDATA[{
 	"type": "git",
@@ -142,6 +142,7 @@ mvn verify sonar:sonar
 		<fld_case>U</fld_case>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Document code]]></fld_comment>
@@ -178,6 +179,7 @@ mvn verify sonar:sonar
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Markdown file]]></fld_comment>
@@ -214,6 +216,7 @@ mvn verify sonar:sonar
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Is document published?]]></fld_comment>
@@ -250,6 +253,7 @@ mvn verify sonar:sonar
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Document title]]></fld_comment>
@@ -286,6 +290,7 @@ mvn verify sonar:sonar
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Document URL]]></fld_comment>
@@ -322,6 +327,7 @@ mvn verify sonar:sonar
 		<fld_case>U</fld_case>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Markdown image code]]></fld_comment>
@@ -358,6 +364,7 @@ mvn verify sonar:sonar
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Image]]></fld_comment>

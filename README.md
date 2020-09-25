@@ -58,8 +58,8 @@ Markdown document
 | `mdDocTitle`                                                 | char(100)                                | yes      | yes       |          | Document title                                                                   |
 | `mdDocFile`                                                  | document                                 |          | yes       |          | Markdown file                                                                    |
 | `mdDocPublished`                                             | boolean                                  |          | yes       |          | Is document published?                                                           |
-| `row_module_id` link to **`Module`**                         | id                                       | yes      | yes       |          | -                                                                                |
-| _Ref. `row_module_id.mdl_name`_                              | _regexp(100)_                            |          |           |          | -                                                                                |
+| `row_module_id` link to **`Module`**                         | id                                       | yes      | yes       |          | Module                                                                           |
+| _Ref. `row_module_id.mdl_name`_                              | _regexp(100)_                            |          |           |          | _Module name_                                                                    |
 
 `MDDocumentHistoric` business object definition
 -----------------------------------------------
@@ -70,10 +70,10 @@ Markdown document
 
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
 | ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
-| `row_ref_id` link to **`MDDocument`**                        | id                                       | yes*     |           |          | -                                                                                |
-| `row_idx`                                                    | int(11)                                  | yes*     | yes       |          | -                                                                                |
-| `created_by_hist`                                            | char(100)                                | yes*     |           |          | -                                                                                |
-| `created_dt_hist`                                            | datetime                                 | yes*     |           |          | -                                                                                |
+| `row_ref_id` link to **`MDDocument`**                        | id                                       | yes*     |           |          | Record row ID                                                                    |
+| `row_idx`                                                    | int(11)                                  | yes*     | yes       |          | History record index                                                             |
+| `created_by_hist`                                            | char(100)                                | yes*     |           |          | Created by                                                                       |
+| `created_dt_hist`                                            | datetime                                 | yes*     |           |          | Created date                                                                     |
 | `mdDocCode`                                                  | regexp(50)                               | yes*     | yes       |          | Document code                                                                    |
 | `mdDocTitle`                                                 | char(100)                                | yes      | yes       |          | Document title                                                                   |
 | `mdDocFile`                                                  | document                                 |          | yes       |          | Markdown file                                                                    |
@@ -93,8 +93,8 @@ Markdown image
 | ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
 | `mdImgCode`                                                  | regexp(50)                               | yes*     | yes       |          | Markdown image code                                                              |
 | `mdImgFile`                                                  | image                                    | yes      | yes       |          | Image                                                                            |
-| `row_module_id` link to **`Module`**                         | id                                       | yes      | yes       |          | -                                                                                |
-| _Ref. `row_module_id.mdl_name`_                              | _regexp(100)_                            |          |           |          | -                                                                                |
+| `row_module_id` link to **`Module`**                         | id                                       | yes      | yes       |          | Module                                                                           |
+| _Ref. `row_module_id.mdl_name`_                              | _regexp(100)_                            |          |           |          | _Module name_                                                                    |
 
 `MDDiff` external object definition
 -----------------------------------

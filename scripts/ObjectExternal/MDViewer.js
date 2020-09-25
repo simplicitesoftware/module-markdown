@@ -210,11 +210,9 @@ MDViewer.display = function(params) {
 		md = MDViewer.substAll.call(this, params.getBaseLocation(), md);
 	}
 
-	if (action) { // Embedded
-		var id = this.getName() + "_" + code;
-		this.setHTML("<div id=\"" + id + "\">" + MarkdownTool.toHTML(md) + "</div>");
-		return this.javascript("$(\"#" + id + " pre code\").each(function() { hljs.highlightBlock(this); });");
-	} else { // Fullpage
-		return MarkdownTool.toHTMLPage(title, md);
-	}
+	md = MarkdownTool.toHTMLPage(title, md);
+	if (action)
+		this.setHTML(md);
+	else
+		return md;
 };
