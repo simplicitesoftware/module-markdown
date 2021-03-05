@@ -4,6 +4,6 @@
     "format": "xml",
     "files": ["Markdown.xml"],
     "repository": {},
-    "version": "1.1",
+    "version": "5",
     "platform": "5.2.0-alpha"
 }

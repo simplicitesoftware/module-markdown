@@ -5,7 +5,7 @@
 	<action>upsert</action>
 	<data>
 		<mdl_name>Markdown</mdl_name>
-		<mdl_version>1.1</mdl_version>
+		<mdl_version>5</mdl_version>
 		<mdl_prefix>md</mdl_prefix>
 		<mdl_url><![CDATA[{
 	"type": "git",
