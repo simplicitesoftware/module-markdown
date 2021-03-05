@@ -157,7 +157,7 @@ mvn verify sonar:sonar
 	<data>
 		<fld_name>mdDocFile</fld_name>
 		<fld_dbname>doc_file</fld_dbname>
-		<fld_visible>3</fld_visible>
+		<fld_visible>2</fld_visible>
 		<fld_updatable>1</fld_updatable>
 		<fld_required>0</fld_required>
 		<fld_fonctid>0</fld_fonctid>
@@ -268,7 +268,7 @@ mvn verify sonar:sonar
 	<data>
 		<fld_name>mdDocURL</fld_name>
 		<fld_dbname>doc_url</fld_dbname>
-		<fld_visible>3</fld_visible>
+		<fld_visible>2</fld_visible>
 		<fld_updatable>0</fld_updatable>
 		<fld_required>0</fld_required>
 		<fld_fonctid>0</fld_fonctid>

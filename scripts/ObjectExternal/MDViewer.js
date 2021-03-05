@@ -210,9 +210,8 @@ MDViewer.display = function(params) {
 		md = MDViewer.substAll.call(this, params.getBaseLocation(), md);
 	}
 
-	md = MarkdownTool.toHTMLPage(title, md);
 	if (action)
-		this.setHTML(md);
+		this.setHTML("<div class=\"doc\">" + MarkdownTool.toHTML(md) + "</div>");
 	else
-		return md;
+		return MarkdownTool.totoHTMLPage(title, md);
 };
