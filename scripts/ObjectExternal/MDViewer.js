@@ -73,7 +73,7 @@ MDViewer.substAll = function(loc, d) {
 		while (m) {
 			var mdl = m.split(":");
 			tl = mdl.length > 1 ? Tool.parseInt(mdl[1], 2) : 2;
-			md = MDViewer.substTag.call(this, md, "MODULEDOC", MarkdownTool.docForModule(null, mdl[0], false, false, false, tl));
+			md = MDViewer.substTag.call(this, md, "MODULEDOC", MarkdownTool.docForModule(null, mdl[0], false, false, tl));
 			m = MDViewer.findTag.call(this, md, "MODULEDOC");
 		}
 	} catch(e) {}

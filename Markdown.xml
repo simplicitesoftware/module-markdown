@@ -5,7 +5,7 @@
 	<action>upsert</action>
 	<data>
 		<mdl_name>Markdown</mdl_name>
-		<mdl_version>1.0</mdl_version>
+		<mdl_version>1.1</mdl_version>
 		<mdl_prefix>md</mdl_prefix>
 		<mdl_url><![CDATA[{
 	"type": "git",
@@ -85,6 +85,11 @@ mvn verify sonar:sonar
 	<action>upsert</action>
 	<data>
 		<prf_profile_id.grp_name>ADMIN</prf_profile_id.grp_name>
+		<prf_group_id.grp_name>MD_ADMIN</prf_group_id.grp_name>
+		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
+	</data>
+	<data>
+		<prf_profile_id.grp_name>DESIGNER</prf_profile_id.grp_name>
 		<prf_group_id.grp_name>MD_ADMIN</prf_group_id.grp_name>
 		<row_module_id.mdl_name>Markdown</row_module_id.mdl_name>
 	</data>
@@ -561,6 +566,8 @@ mvn verify sonar:sonar
 		<obo_btn_merge>P</obo_btn_merge>
 		<obo_btn_save>1</obo_btn_save>
 		<obo_btn_saveclose>1</obo_btn_saveclose>
+		<obo_btn_savenew>1</obo_btn_savenew>
+		<obo_btn_savecopy>1</obo_btn_savecopy>
 		<obo_btn_close>1</obo_btn_close>
 		<obo_tray>1</obo_tray>
 		<obo_dashboard>1</obo_dashboard>
@@ -623,6 +630,8 @@ mvn verify sonar:sonar
 		<obo_btn_merge>P</obo_btn_merge>
 		<obo_btn_save>1</obo_btn_save>
 		<obo_btn_saveclose>1</obo_btn_saveclose>
+		<obo_btn_savenew>1</obo_btn_savenew>
+		<obo_btn_savecopy>1</obo_btn_savecopy>
 		<obo_btn_close>1</obo_btn_close>
 		<obo_tray>1</obo_tray>
 		<obo_dashboard>1</obo_dashboard>
@@ -685,6 +694,8 @@ mvn verify sonar:sonar
 		<obo_btn_merge>P</obo_btn_merge>
 		<obo_btn_save>1</obo_btn_save>
 		<obo_btn_saveclose>1</obo_btn_saveclose>
+		<obo_btn_savenew>1</obo_btn_savenew>
+		<obo_btn_savecopy>1</obo_btn_savecopy>
 		<obo_btn_close>1</obo_btn_close>
 		<obo_tray>1</obo_tray>
 		<obo_dashboard>1</obo_dashboard>

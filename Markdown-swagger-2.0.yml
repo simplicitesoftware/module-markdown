@@ -2,7 +2,7 @@
 # / __(_)_ __  _ __| (_)__(_) |_ /_/
 # \__ \ | '  \| '_ \ | / _| |  _/ -_)
 # |___/_|_|_|_| .__/_|_\__|_|\__\___|
-#             |_| Module: Markdown 1.0
+#             |_| Module: Markdown 1.1
 paths:
   /rest/MDDocumentHistoric/{row_id}/action:MDDocDiff:
     get:
@@ -987,7 +987,7 @@ info:
     email: contact@simplicitesoftware.com
   description: API for module Markdown
   title: Markdown
-  version: '1.0'
+  version: '1.1'
 tags:
 - name: MDDocument
   description: MD document
